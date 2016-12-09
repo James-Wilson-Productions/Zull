@@ -1,20 +1,20 @@
 fileFormatVersion: 2
 guid: 783f31dd949a148459df1f38cd389980
-timeCreated: 1481279557
+timeCreated: 1481286587
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: ShroudSpriteSheet_0
-    21300002: ShroudSpriteSheet_1
-    21300004: ShroudSpriteSheet_2
-    21300006: ShroudSpriteSheet_3
-    21300008: ShroudSpriteSheet_4
-    21300010: ShroudSpriteSheet_5
-    21300012: ShroudSpriteSheet_7
-    21300014: ShroudSpriteSheet_8
-    21300016: ShroudSpriteSheet_11
-    21300018: ShroudSpriteSheet_13
-    21300020: ShroudSpriteSheet_14
+    21300000: Hat
+    21300002: RightUpperArm
+    21300004: LeftUpperArm
+    21300006: Face
+    21300008: RightLowerArm
+    21300010: LeftLowerArm
+    21300012: RightLowerLeg
+    21300014: RightUpperLeg
+    21300016: Eye
+    21300018: LeftUpperLeg
+    21300020: LeftLowerLeg
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -64,7 +64,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ShroudSpriteSheet_0
+      name: Hat
       rect:
         serializedVersion: 2
         x: 31
@@ -77,7 +77,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ShroudSpriteSheet_1
+      name: RightUpperArm
       rect:
         serializedVersion: 2
         x: 331
@@ -90,7 +90,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ShroudSpriteSheet_2
+      name: LeftUpperArm
       rect:
         serializedVersion: 2
         x: 439
@@ -103,7 +103,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ShroudSpriteSheet_3
+      name: Face
       rect:
         serializedVersion: 2
         x: 594
@@ -111,12 +111,12 @@ TextureImporter:
         width: 162
         height: 311
       alignment: 9
-      pivot: {x: 0.34257337, y: 0.19807832}
+      pivot: {x: 0.50715506, y: 0.15707652}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ShroudSpriteSheet_4
+      name: RightLowerArm
       rect:
         serializedVersion: 2
         x: 291
@@ -129,7 +129,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ShroudSpriteSheet_5
+      name: LeftLowerArm
       rect:
         serializedVersion: 2
         x: 447
@@ -142,7 +142,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ShroudSpriteSheet_7
+      name: RightLowerLeg
       rect:
         serializedVersion: 2
         x: 277
@@ -155,7 +155,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ShroudSpriteSheet_8
+      name: RightUpperLeg
       rect:
         serializedVersion: 2
         x: 387
@@ -168,7 +168,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ShroudSpriteSheet_11
+      name: Eye
       rect:
         serializedVersion: 2
         x: 94
@@ -181,7 +181,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ShroudSpriteSheet_13
+      name: LeftUpperLeg
       rect:
         serializedVersion: 2
         x: 508
@@ -194,7 +194,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ShroudSpriteSheet_14
+      name: LeftLowerLeg
       rect:
         serializedVersion: 2
         x: 616
