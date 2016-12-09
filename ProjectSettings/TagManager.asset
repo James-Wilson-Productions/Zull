@@ -44,3 +44,6 @@ TagManager:
   - name: Shroud
     uniqueID: 635900663
     locked: 0
+  - name: InfrontCharacter
+    uniqueID: 677666745
+    locked: 0
