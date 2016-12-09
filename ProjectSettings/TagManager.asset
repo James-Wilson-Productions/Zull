@@ -47,3 +47,6 @@ TagManager:
   - name: InfrontCharacter
     uniqueID: 677666745
     locked: 0
+  - name: JumpPad
+    uniqueID: 2794671365
+    locked: 0
