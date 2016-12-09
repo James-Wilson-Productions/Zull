@@ -540,6 +540,6 @@ PlayerSettings:
   iOS::VR::enabledDevices: []
   tvOS::VR::enabledDevices: []
   cloudProjectId: cef32400-f985-40d3-9fb1-0dada625e9f4
-  projectName: Zull5
+  projectName: Zull
   organizationId: james-wilson-productions
   cloudEnabled: 0
