@@ -1,9 +1,17 @@
 fileFormatVersion: 2
 guid: bf163ad6e245143ca83a963889b073c4
-timeCreated: 1481199213
+timeCreated: 1481299202
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: B24_0
+    21300002: B24_1
+    21300004: B24_2
+    21300006: B24_3
+    21300008: B24_4
+    21300010: B24_5
+    21300012: B24_6
+    21300014: B24_7
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -38,7 +46,7 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -51,7 +59,111 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: B24_0
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 537
+        width: 56
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: B24_1
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 395
+        width: 46
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: B24_2
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 387
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: B24_3
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 305
+        width: 52
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: B24_4
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 181
+        width: 50
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: B24_5
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 211
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: B24_6
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 93
+        width: 44
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: B24_7
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 39
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
     outline: []
   spritePackingTag: 
   userData: 
