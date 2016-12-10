@@ -68,7 +68,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 845ae78818f067442b6fb690bb17c3b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyAfterSecs: 4
+  destroyAfterSecs: 1000
 --- !u!114 &114000012457354560
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -80,7 +80,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bf05750a9e81dc4b8981f0ce583c8c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turret: {fileID: 0}
   speed: 25
 --- !u!212 &212000010561000098
 SpriteRenderer:
