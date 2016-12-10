@@ -41,6 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: JumpPad
+    uniqueID: 2106585561
+    locked: 0
+  - name: Turret
+    uniqueID: 1195423199
+    locked: 0
   - name: Shroud
     uniqueID: 635900663
     locked: 0
