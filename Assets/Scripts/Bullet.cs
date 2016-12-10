@@ -4,16 +4,16 @@ using UnityEditor;
 
 public class Bullet : MonoBehaviour {
 
-    GameObject turret;
+    Transform turretBullets;
 	public float speed;
 
 	// Use this for initialization
 	void Start () {
-        turret = GameObject.Find("Turret");
+        turretBullets = GetComponentInParent<Transform>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		transform.position += -turret.transform.right * Time.deltaTime * speed;
+        transform.position += -transform.right * Time.deltaTime * speed;
 	}
 }
