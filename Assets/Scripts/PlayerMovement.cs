@@ -2,159 +2,64 @@
 using System.Collections;
 using System;
 using UnityEngine.EventSystems;
+using UnityEditor;
 
 public class PlayerMovement : MonoBehaviour {
 	public static PlayerMovement instance;
 
-	//players states
-	public enum State{
-		MOVE, IDLE, AIR
-	}
-	State state;
-
-	public Collider2D groundCheck;
-
 	Rigidbody2D rigid;
 	Animator anim;
 
-	public float speed;
 	public float jumpForce;
-	public int maxSpeed;
-
+	public int speed;
 	int moveX;
 	int moveY;
 
-	public bool grounded;
 	public bool slowMo;
+	public bool moving;
 	public bool canJump;
 
 	void Awake(){
 		instance = this;
 	}
 
-	// Use this for initialization
-	void Start () {
-		state = State.IDLE;
+	void Start(){
 		rigid = GetComponent <Rigidbody2D> ();
-		anim = GetComponentInChildren <Animator> ();
+		anim = GetComponentInChildren<Animator> ();
 	}
-	
-	// Update is called once per frame
-	void FixedUpdate () {
-		//player will call respective update based on state
+
+	void FixedUpdate(){
 		moveX = (int)Input.GetAxisRaw ("Horizontal");
 		moveY = (int)Input.GetAxisRaw ("Vertical");
 
-		//will make updates that are generic to the player. eg. check if the player is on the ground
-		UpdateComponents ();
-		UpdateAnimator ();
-
-		//update player based on his current state
-		//will also update the animator on the players current state
-		switch (state){
-		case State.MOVE:
-			UpdateMovement ();
-			anim.SetBool ("Moving", (moveX!=0));
-			break;
-		case State.IDLE:
-			UpdateIdle ();
-			anim.SetBool ("Moving", (moveX!=0));
-			break;
-		case State.AIR:
-			UpdateAir ();
-			anim.SetBool ("Grounded", grounded);
-			break;
-		}
+		UpdateMoving ();
+		UpdateJumping ();
 	}
 
-	void BendTime(){
-		if (moveX==0 && grounded){
-			Time.timeScale = 0.3f;
-			anim.speed = 1/0.3f;
-			slowMo = true;
-		} else {
-			Time.timeScale = 1;
-			anim.speed = 1;
-			slowMo = false;
-		}
-	}
-
-	void UpdateAir(){
-		if (grounded) {
-			SwitchState (State.IDLE);
-		}
-
-		rigid.AddForce (new Vector2(moveX*speed, 0));
-	}
-
-	void UpdateAnimator(){
-		anim.SetBool ("Grounded", grounded);
-	}
-
-	void UpdateIdle(){
+	void UpdateMoving(){
 		if (moveX != 0){
-			state = State.MOVE;
+			rigid.velocity = new Vector2 (1, 0) * speed * moveX;
+			moving = true;
+			anim.SetBool ("Moving", moving);
+		} else{
+			moving = false;
+			anim.SetBool ("Moving", moving);
 		}
-		
-		rigid.velocity = new Vector2 (0, rigid.velocity.y);
+
+		//update the sprite orientation
+		if (moveX != 0){
+			transform.localScale = new Vector3 (moveX, 1, 1);
+		}
 	}
 
-	void UpdateComponents(){
-		//orientate the player to face right or left
-		UpdateSpriteFlip ();
-
-		//check if the player is in the air
-		if (!grounded){
-			SwitchState (State.AIR);
-		}
-
-		//change time
-		BendTime ();
-
-		//player jumping
-		if (moveY > 0 && grounded && canJump){
+	void UpdateJumping (){
+		if (moveY > 0 && canJump){
 			Jump ();
 		}
 	}
 
-	void UpdateMovement(){
-		if (moveX == 0){
-			//the player is not moving-switch to idle
-			SwitchState (State.IDLE);
-		}
-
-		rigid.AddForce (new Vector2 (1, 0)*moveX*speed, ForceMode2D.Impulse);
-		//clamp players max speed
-		if (rigid.velocity.magnitude > maxSpeed){
-			rigid.velocity = rigid.velocity.normalized * maxSpeed;
-		}
-
-	}
-
-	void UpdateSpriteFlip(){
-		if (moveX > 0){
-			transform.localScale = new Vector3 (1, 1, 1);
-		} else if (moveX < 0){
-			transform.localScale = new Vector3 (-1, 1, 1);
-		}
-	}
-
-
-	public void SwitchState(State state){
-		//will switch the players current state given state
-		this.state = state;
-	}
-
-	public void OnGround(){
-		//will set enable the player to leave the AIR state
-		SwitchState (State.IDLE);
-		grounded = true;
-		canJump = true;
-	}
-
 	void Jump(){
-		rigid.AddForce (Vector2.up * jumpForce, ForceMode2D.Impulse);
-		canJump = false;
-		grounded = false;
+		rigid.AddForce (Vector2.up * jumpForce);
 	}
+
 }
