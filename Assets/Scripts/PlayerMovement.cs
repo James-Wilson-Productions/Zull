@@ -85,12 +85,13 @@ public class PlayerMovement : MonoBehaviour {
 	void UpdateLadder(){
 		if (onLadder){
 			if (moveY > 0){
-				rigid.velocity = new Vector2 (moveX * speed / 10, moveY * speed / 2);
+				rigid.velocity = new Vector2 (moveX * speed / 4, moveY * speed / 2);
 			} else if (moveY < 0) {
-				rigid.velocity = new Vector2 (moveX * speed / 10, moveY * speed);
+				rigid.velocity = new Vector2 (moveX * speed / 4, moveY * speed);
 			} else {
-				rigid.velocity = new Vector2 (moveX * speed / 10, 0);
+				rigid.velocity = new Vector2 (moveX * speed / 4, 0);
 			}
+
 		}
 	}
 
