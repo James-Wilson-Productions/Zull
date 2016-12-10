@@ -155,5 +155,6 @@ public class PlayerMovement : MonoBehaviour {
 	void Jump(){
 		rigid.AddForce (Vector2.up * jumpForce, ForceMode2D.Impulse);
 		canJump = false;
+		grounded = false;
 	}
 }
