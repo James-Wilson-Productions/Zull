@@ -22,9 +22,12 @@ public class PlayerMovement : MonoBehaviour {
 	public bool shieldDraw;
 	public bool onIce;
 	public bool onLadder;
+	public bool onJumpPad;
+	bool canMove;
 
 	void Awake(){
 		instance = this;
+		canMove = true;
 	}
 
 	void Start(){
@@ -36,16 +39,18 @@ public class PlayerMovement : MonoBehaviour {
 		moveX = (int)Input.GetAxisRaw ("Horizontal");
 		moveY = (int)Input.GetAxisRaw ("Vertical");
 
-		if (!shieldDraw){
-		}
-
-		if (!onLadder){
-			UpdateMoving ();
+		if (!onLadder && !onJumpPad){
+			if (canMove){
+				UpdateMoving ();
+			}
+				
 			UpdateShieldDraw ();
 		}
+
 		UpdateJumping ();
 		UpdateAnimator ();
 		UpdateLadder ();
+		UpdateJumpPad ();
 
 		//update the time
 		BendTime();
@@ -66,6 +71,7 @@ public class PlayerMovement : MonoBehaviour {
 		anim.SetBool ("Grounded", grounded);
 		anim.SetBool ("ShieldDraw", shieldDraw);
 		anim.SetBool ("Climbing", onLadder);
+		anim.SetBool ("OnJumpPad", onJumpPad);
 		anim.SetInteger ("YSpeed", moveY);
 	}
 		
@@ -93,6 +99,9 @@ public class PlayerMovement : MonoBehaviour {
 		if (moveY > 0 && canJump){
 			Jump ();
 		}
+	}
+
+	void UpdateJumpPad(){
 	}
 
 	void UpdateLadder(){
@@ -139,4 +148,35 @@ public class PlayerMovement : MonoBehaviour {
 		rigid.isKinematic = false;
 	}
 
+	public void OnJumpPad(){
+		rigid.isKinematic = true;
+		onJumpPad = true;
+	}
+
+	public void OffJumpPad(){
+		rigid.isKinematic = false;
+		onJumpPad = false;
+	}
+
+	public void Push(Vector3 direction, float power, float airTime){
+		//will push the player in the parsed direction with parsed power
+		rigid.velocity = Vector2.zero;
+		rigid.AddForce (direction*power, ForceMode2D.Impulse);
+
+		//orientate the player to face the right direction
+		if (rigid.velocity.x > 0){
+			//player is moving to the right
+			transform.localScale = new Vector3 (1,1,1);
+		} else {
+			//player is moving to the left
+			transform.localScale = new Vector3 (-1,1,1);
+		}
+		StartCoroutine (DontMove(airTime));
+	}
+
+	IEnumerator DontMove(float airTime){
+		canMove = false;
+		yield return new WaitForSeconds (airTime);
+		canMove = true;
+	}
 }
