@@ -2,19 +2,19 @@
 using System.Collections;
 
 public class Ladder : MonoBehaviour {
+
+	bool playerOnLadder;
 	void OnTriggerEnter2D(Collider2D collider){
 		if (collider.tag == "Player"){
 			PlayerMovement.instance.OnLadder ();
+			PlayerMovement.instance.ladderObject = this.gameObject;
 		}
 	}
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+	void OnTriggerExit2D(Collider2D collider){
+		if (collider.tag == "Player"){
+			PlayerMovement.instance.OffLadder ();
+			PlayerMovement.instance.ladderObject = null;
+		}
 	}
 }
