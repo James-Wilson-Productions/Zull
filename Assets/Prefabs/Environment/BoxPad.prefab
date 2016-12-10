@@ -83,8 +83,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012611040308}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.770534, y: 12.135601, z: 6.8945312}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 25.155481, y: 8.98831, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -113,8 +113,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010673638348}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.6038496, y: 3.37, z: -6.8945312}
-  m_LocalScale: {x: 1.2887647, y: 2.605626, z: 1.198851}
+  m_LocalPosition: {x: -3.6038496, y: 3.53, z: 0}
+  m_LocalScale: {x: 1.5169163, y: 2.605626, z: 1.198851}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000010794987908}
@@ -126,7 +126,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012304951436}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.4307063, y: -4.1444187, z: -6.8945312}
+  m_LocalPosition: {x: -3.4307063, y: -4.1444187, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -302,11 +302,11 @@ SpringJoint2D:
   m_ConnectedRigidBody: {fileID: 0}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: -3.2930665, y: 1.0509787}
-  m_ConnectedAnchor: {x: 1.4271078, y: 13.058933}
+  m_AutoConfigureConnectedAnchor: 1
+  m_Anchor: {x: -3.26194, y: 7.472784}
+  m_ConnectedAnchor: {x: 35.99354, y: 61.161095}
   m_AutoConfigureDistance: 1
-  m_Distance: 0.13722141
+  m_Distance: 0.005
   m_DampingRatio: 0
   m_Frequency: 1
 --- !u!233 &233000011102182542
@@ -323,7 +323,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -3.5032606, y: -8.758159}
-  m_ConnectedAnchor: {x: 1.2672734, y: 3.3774424}
+  m_ConnectedAnchor: {x: 35.75222, y: 44.93015}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
