@@ -138,7 +138,7 @@ GameObject:
   - 114: {fileID: 114000010430914896}
   m_Layer: 0
   m_Name: Shroud
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -362,7 +362,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.02, y: -1.02, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -2.1622567}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -72.82336}
   m_Children:
   - {fileID: 4000013110466604}
   m_Father: {fileID: 4000011901633650}
@@ -389,7 +389,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.17000008, y: -1.5999999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 2.023205}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 130.89659}
   m_Children:
   - {fileID: 4000012391540042}
   m_Father: {fileID: 4000013250570220}
@@ -403,7 +403,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.03, y: -0.69, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -3.149525}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 123.536}
   m_Children: []
   m_Father: {fileID: 4000013452080402}
   m_RootOrder: 0
@@ -416,7 +416,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.1, y: -3.34, z: 0}
   m_LocalScale: {x: 1.0389612, y: 1.3437505, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.89688456}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 59.76198}
   m_Children:
   - {fileID: 4000010486505382}
   m_Father: {fileID: 4000013590498906}
@@ -430,7 +430,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.2, y: -0.77, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 7.513071}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 6.1212335}
   m_Children:
   - {fileID: 4000010657002802}
   m_Father: {fileID: 4000014032160638}
@@ -457,7 +457,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.16623375, y: -3.22, z: 0}
   m_LocalScale: {x: 1.0389612, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 2.0389743}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -22.825184}
   m_Children:
   - {fileID: 4000013656345170}
   - {fileID: 4000013341084818}
@@ -514,7 +514,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.23, y: -3.34, z: 0}
   m_LocalScale: {x: 1.0389612, y: 0.9124999, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -1.2792773}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 57.870094}
   m_Children:
   - {fileID: 4000010814557088}
   m_Father: {fileID: 4000013590498906}
@@ -555,7 +555,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.39, y: 0.53, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 361.79657}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 94.350006}
   m_Children:
   - {fileID: 4000011528408046}
   m_Father: {fileID: 4000012213597528}
@@ -641,7 +641,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.64, y: 0.82, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -4.8403964}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 88.993546}
   m_Children:
   - {fileID: 4000012047885468}
   m_Father: {fileID: 4000012213597528}
@@ -671,7 +671,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 1000010878976314}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 14e3de008d7be4d368f56f57866d4f46, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: -0.3, y: -5.89}
@@ -699,7 +699,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1000010878976314}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 14e3de008d7be4d368f56f57866d4f46, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: -0.3, y: -3.39}
@@ -887,6 +887,8 @@ MonoBehaviour:
   canJump: 0
   grounded: 0
   shieldDraw: 0
+  onIce: 0
+  onLadder: 0
 --- !u!198 &198000011085367602
 ParticleSystem:
   m_ObjectHideFlags: 1
