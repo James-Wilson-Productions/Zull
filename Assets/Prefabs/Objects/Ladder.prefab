@@ -66,7 +66,7 @@ GameObject:
   - 4: {fileID: 4000010230892946}
   - 212: {fileID: 212000013235060626}
   - 61: {fileID: 61000013016096332}
-  - 61: {fileID: 61000011884548840}
+  - 114: {fileID: 114000011961371408}
   m_Layer: 0
   m_Name: Ladder
   m_TagString: Untagged
@@ -96,8 +96,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013670617788}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.83, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 25.614784, y: 65.6, z: 0}
+  m_LocalScale: {x: 2.5741577, y: 2.4300072, z: 1.6474614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 4000010230892946}
@@ -129,20 +129,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000010230892946}
   m_RootOrder: 1
---- !u!61 &61000011884548840
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013983337162}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0.0067405105, y: 5.1993685}
-  serializedVersion: 2
-  m_Size: {x: 1.2451767, y: 0.10047531}
 --- !u!61 &61000013016096332
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -156,7 +142,18 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0.009975314, y: 0.16977882}
   serializedVersion: 2
-  m_Size: {x: 0.16162828, y: 10.592356}
+  m_Size: {x: 1.36, y: 9.99}
+--- !u!114 &114000011961371408
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013983337162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5d6a99a3820f4032a2e35bd96cb3c73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212000013235060626
 SpriteRenderer:
   m_ObjectHideFlags: 1

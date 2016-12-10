@@ -462,7 +462,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -52.276}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!1001 &338842498
 Prefab:
   m_ObjectHideFlags: 0
@@ -661,6 +661,54 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b6ee03e23cdd8ca4d9add9f8da3f5efc, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &415074140
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4000011040449600, guid: e8b6d83e4fdb0034b9ae6cc192b7965f, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 25.614784
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011040449600, guid: e8b6d83e4fdb0034b9ae6cc192b7965f, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 65.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011040449600, guid: e8b6d83e4fdb0034b9ae6cc192b7965f, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011040449600, guid: e8b6d83e4fdb0034b9ae6cc192b7965f, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011040449600, guid: e8b6d83e4fdb0034b9ae6cc192b7965f, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011040449600, guid: e8b6d83e4fdb0034b9ae6cc192b7965f, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011040449600, guid: e8b6d83e4fdb0034b9ae6cc192b7965f, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011040449600, guid: e8b6d83e4fdb0034b9ae6cc192b7965f, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61000013016096332, guid: e8b6d83e4fdb0034b9ae6cc192b7965f,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 9.99
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 61000011884548840, guid: e8b6d83e4fdb0034b9ae6cc192b7965f, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: e8b6d83e4fdb0034b9ae6cc192b7965f, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &441896235
 Prefab:
   m_ObjectHideFlags: 0
@@ -698,7 +746,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013554747572, guid: 378c131c9abc03d48b73fd749d350128, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 95000013795409200, guid: 378c131c9abc03d48b73fd749d350128,
         type: 2}
@@ -988,7 +1036,7 @@ Camera:
   far clip plane: 13.4
   field of view: 70
   orthographic: 1
-  orthographic size: 8.519283
+  orthographic size: 23.06
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1166,7 +1214,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010542270322, guid: 8760798743723324a88d2148bd8d3b0d, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4000010542270322, guid: 8760798743723324a88d2148bd8d3b0d, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -1809,7 +1857,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010744449306, guid: 859d8c7c2e1db1c458794bc1d16babf0, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4000010744449306, guid: 859d8c7c2e1db1c458794bc1d16babf0, type: 2}
       propertyPath: m_LocalScale.x
@@ -2255,7 +2303,7 @@ Transform:
   - {fileID: 515018512}
   - {fileID: 114998666}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!4 &2021040758 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000013584666284, guid: b8a0a8fd0e525804facf588abb569101,
