@@ -17,6 +17,12 @@ public class GroundCheck : MonoBehaviour {
 		}
 	}
 
+	void OnTriggerStay2D(Collider2D collider){
+		if (collider.gameObject.layer == LayerMask.NameToLayer ("Ground")){
+			playerMovement.grounded = true;
+		}
+	}
+
 	void OnTriggerExit2D(Collider2D collider){
 		if (collider.gameObject.layer == LayerMask.NameToLayer ("Ground")){
 			playerMovement.grounded = false;

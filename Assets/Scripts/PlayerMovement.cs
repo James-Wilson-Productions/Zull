@@ -18,12 +18,15 @@ public class PlayerMovement : MonoBehaviour {
 	Animator anim;
 
 	public float speed;
+	public float jumpForce;
 	public int maxSpeed;
 
 	int moveX;
 	int moveY;
 
 	public bool grounded;
+	public bool slowMo;
+	public bool canJump;
 
 	void Awake(){
 		instance = this;
@@ -40,7 +43,7 @@ public class PlayerMovement : MonoBehaviour {
 	void FixedUpdate () {
 		//player will call respective update based on state
 		moveX = (int)Input.GetAxisRaw ("Horizontal");
-		moveY = (int)Input.GetAxisRaw ("Horizontal");
+		moveY = (int)Input.GetAxisRaw ("Vertical");
 
 		//will make updates that are generic to the player. eg. check if the player is on the ground
 		UpdateComponents ();
@@ -61,6 +64,18 @@ public class PlayerMovement : MonoBehaviour {
 			UpdateAir ();
 			anim.SetBool ("Grounded", grounded);
 			break;
+		}
+	}
+
+	void BendTime(){
+		if (moveX==0 && grounded){
+			Time.timeScale = 0.3f;
+			anim.speed = 1/0.3f;
+			slowMo = true;
+		} else {
+			Time.timeScale = 1;
+			anim.speed = 1;
+			slowMo = false;
 		}
 	}
 
@@ -92,13 +107,13 @@ public class PlayerMovement : MonoBehaviour {
 		if (!grounded){
 			SwitchState (State.AIR);
 		}
-		print ("running");
-		if (moveX==0){
-			Time.timeScale = 0.1f;
-			anim.speed = 10;
-		} else {
-			Time.timeScale = 1;
-			anim.speed = 1;
+
+		//change time
+		BendTime ();
+
+		//player jumping
+		if (moveY > 0 && grounded && canJump){
+			Jump ();
 		}
 	}
 
@@ -106,10 +121,6 @@ public class PlayerMovement : MonoBehaviour {
 		if (moveX == 0){
 			//the player is not moving-switch to idle
 			SwitchState (State.IDLE);
-		}
-
-		if (moveY > 0){
-			//the player wants to jump
 		}
 
 		rigid.AddForce (new Vector2 (1, 0)*moveX*speed, ForceMode2D.Impulse);
@@ -138,5 +149,11 @@ public class PlayerMovement : MonoBehaviour {
 		//will set enable the player to leave the AIR state
 		SwitchState (State.IDLE);
 		grounded = true;
+		canJump = true;
+	}
+
+	void Jump(){
+		rigid.AddForce (Vector2.up * jumpForce, ForceMode2D.Impulse);
+		canJump = false;
 	}
 }
