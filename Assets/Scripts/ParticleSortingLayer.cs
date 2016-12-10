@@ -2,16 +2,10 @@
 using System.Collections;
 
 public class ParticleSortingLayer : MonoBehaviour {
-    
 
+    ParticleSystem ps;
 
-	// Use this for initialization
 	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+        
 	}
 }
