@@ -135,7 +135,11 @@ GameObject:
   - 61: {fileID: 61000013060737782}
   - 58: {fileID: 58000010917997122}
   - 114: {fileID: 114000013234353882}
+<<<<<<< HEAD
   - 114: {fileID: 114000013786307012}
+=======
+  - 114: {fileID: 114000010430914896}
+>>>>>>> 53617f650208779641bc6384c2c74b67d24cebd1
   m_Layer: 0
   m_Name: Shroud
   m_TagString: Untagged
@@ -858,6 +862,17 @@ Light:
   m_BounceIntensity: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114000010430914896
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010878976314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a209888017bc420ca3753f82e994cf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000013234353882
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -869,11 +884,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2ecd1e1588094f8b9703ae4f566686b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   jumpForce: 10
+=======
+  jumpForce: 50
+>>>>>>> 53617f650208779641bc6384c2c74b67d24cebd1
   speed: 24
   slowMo: 0
   moving: 0
   canJump: 0
+<<<<<<< HEAD
 --- !u!114 &114000013786307012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -885,6 +905,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a209888017bc420ca3753f82e994cf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+=======
+  grounded: 0
+  shieldDraw: 0
+>>>>>>> 53617f650208779641bc6384c2c74b67d24cebd1
 --- !u!198 &198000011085367602
 ParticleSystem:
   m_ObjectHideFlags: 1
