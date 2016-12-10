@@ -9,7 +9,6 @@ public class PlayerMovement : MonoBehaviour {
 
 	Rigidbody2D rigid;
 	Animator anim;
-	public GameObject ladderObject;
 
 	public float jumpForce;
 	public int speed;
@@ -91,16 +90,6 @@ public class PlayerMovement : MonoBehaviour {
 				rigid.velocity = new Vector2 (moveX * speed / 10, moveY * speed);
 			} else {
 				rigid.velocity = new Vector2 (moveX * speed / 10, 0);
-			}
-
-			if (ladderObject != null){
-				if (transform.position.x > transform.position.x){
-					//player is on the right
-					transform.localScale = new Vector3 (-1, 1, 1);
-				} else{
-					//player is on the left
-					transform.localScale = new Vector3 (1, 1, 1);
-				}
 			}
 		}
 	}

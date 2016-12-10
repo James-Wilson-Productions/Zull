@@ -7,14 +7,12 @@ public class Ladder : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D collider){
 		if (collider.tag == "Player"){
 			PlayerMovement.instance.OnLadder ();
-			PlayerMovement.instance.ladderObject = this.gameObject;
 		}
 	}
 
 	void OnTriggerExit2D(Collider2D collider){
 		if (collider.tag == "Player"){
 			PlayerMovement.instance.OffLadder ();
-			PlayerMovement.instance.ladderObject = null;
 		}
 	}
 }
