@@ -14,19 +14,25 @@ public class TurretController : MonoBehaviour {
 	}
 
     void Shoot() {
-        //Insert SoundManager Here
+        //Insert bullet fire here
         GameObject instance = (GameObject) Instantiate(bullet, turretMuzzle.position, Quaternion.identity);
         instance.transform.SetParent(turretBullets);
     }
 
     void OnTriggerEnter2D(Collider2D other) {
         if (other.tag == "Player") {
-            animController.SetBool("Shoot", true);
+            StartCoroutine("WaitForShoot");
         }
     }
 
     void OnTriggerExit2D(Collider2D other) {
         animController.SetBool("Shoot", false);
+        StopCoroutine("WaitForShoot");
     }
-    
+
+    IEnumerator WaitForShoot() {
+        //Insert turretStartup sound here
+        yield return new WaitForSeconds(0.65f);
+        animController.SetBool("Shoot", true);
+    }
 }
