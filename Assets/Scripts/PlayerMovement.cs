@@ -43,7 +43,6 @@ public class PlayerMovement : MonoBehaviour {
 			if (canMove){
 				UpdateMoving ();
 			}
-				
 			UpdateShieldDraw ();
 		}
 
