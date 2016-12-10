@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000012457280502}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platform 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,7 +37,7 @@ GameObject:
   - 212: {fileID: 212000010522349148}
   - 60: {fileID: 60000014023053376}
   - 60: {fileID: 60000012024799148}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platform 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
