@@ -1,13 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BouncePad : MonoBehaviour {
+public class BounceTramp : MonoBehaviour {
 
     Rigidbody2D rigid;
+    Animator anim;
     public float bounceHeight;
 
 	void Start () {
-	
+        anim = GetComponent<Animator>();
 	}
 
 	void Update () {
@@ -15,10 +16,11 @@ public class BouncePad : MonoBehaviour {
 	}
 
     void OnTriggerEnter2D(Collider2D other){
-        print("OnTriggerEnter2D!");
         if (other.tag == "Player") {
-            print("It's player!");
+            //TODO: Insert Hydraulic swoosh sound here
+            anim.SetTrigger("DisperseParticle");
             rigid = other.GetComponent<Rigidbody2D>();
+            rigid.velocity = new Vector2(rigid.velocity.x, 0);
             rigid.AddForce(new Vector2(rigid.velocity.x, 50  * bounceHeight * Time.deltaTime), ForceMode2D.Impulse);
         }
     }

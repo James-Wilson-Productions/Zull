@@ -135,8 +135,9 @@ GameObject:
   - 4: {fileID: 4000013074818412}
   - 95: {fileID: 95000011765063970}
   - 61: {fileID: 61000013570227692}
+  - 114: {fileID: 114000011789851380}
   m_Layer: 0
-  m_Name: BouncePad Rig
+  m_Name: BounceTramp Rig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -258,10 +259,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013181507122}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.032043893, w: 0.9994865}
+  m_LocalPosition: {x: -0.043720245, y: -0.1835022, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 3.5660002}
   m_Children:
   - {fileID: 4000010783961680}
   - {fileID: 4000013211841640}
@@ -293,7 +294,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012972738080}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1389003, y: 4.350378, z: 0}
+  m_LocalPosition: {x: 43.47, y: 92.84, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -324,9 +325,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 3.0236228, y: -0.44704294}
+  m_Offset: {x: 2.9506948, y: -1.6895082}
   serializedVersion: 2
-  m_Size: {x: 3.632814, y: 5.6661196}
+  m_Size: {x: 8.268312, y: 0.37374353}
 --- !u!95 &95000011765063970
 Animator:
   serializedVersion: 3
@@ -334,7 +335,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013181507122}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 6c8a44514ec45744186dd0ed0bfc89e5, type: 2}
   m_CullingMode: 0
@@ -344,6 +345,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114000011789851380
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013181507122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d77b977974098cc49ac305eef18060c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bounceHeight: 65
 --- !u!198 &198000010842410946
 ParticleSystem:
   m_ObjectHideFlags: 1

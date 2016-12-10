@@ -15,7 +15,7 @@ public class TurretController : MonoBehaviour {
 
     void Shoot() {
         //TODO: Insert bulletFire sound here
-        GameObject instance = (GameObject) Instantiate(bullet, turretMuzzle.position, Quaternion.identity);
+        GameObject instance = (GameObject) Instantiate(bullet, turretMuzzle.position, transform.rotation);
         instance.transform.SetParent(turretBullets);
     }
 
