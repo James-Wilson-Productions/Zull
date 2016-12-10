@@ -56,3 +56,6 @@ TagManager:
   - name: JumpPad
     uniqueID: 2794671365
     locked: 0
+  - name: BouncePad
+    uniqueID: 437340055
+    locked: 0
