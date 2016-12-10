@@ -18,6 +18,9 @@ public class PlayerMovement : MonoBehaviour {
 	public bool slowMo;
 	public bool moving;
 	public bool canJump;
+	public bool grounded;
+	public bool shieldDraw;
+	public bool onIce;
 
 	void Awake(){
 		instance = this;
@@ -32,19 +35,34 @@ public class PlayerMovement : MonoBehaviour {
 		moveX = (int)Input.GetAxisRaw ("Horizontal");
 		moveY = (int)Input.GetAxisRaw ("Vertical");
 
+		if (!shieldDraw){
+		}
+
 		UpdateMoving ();
+		UpdateShieldDraw ();
 		UpdateJumping ();
+		UpdateAnimator ();
 	}
 
+	void UpdateAnimator(){
+		anim.SetBool ("Moving", moving);
+		anim.SetBool ("Grounded", grounded);
+		anim.SetBool ("ShieldDraw", shieldDraw);
+	}
+		
 	void UpdateMoving(){
-		if (moveX != 0){
-			rigid.velocity = new Vector2 (1, 0) * speed * moveX;
-			moving = true;
-			anim.SetBool ("Moving", moving);
-		} else{
-			moving = false;
-			anim.SetBool ("Moving", moving);
+		//player movement 
+		moving = (moveX != 0);
+
+		//if the player is on ice
+		if (onIce){
+			rigid.AddForce (new Vector2 (speed * moveX, 0));
+		} else if (!shieldDraw && !onIce){
+			rigid.velocity = new Vector2 (1 * speed * moveX, rigid.velocity.y);
+		} else {
+			rigid.velocity = new Vector2 (1 * speed/5 * moveX, rigid.velocity.y);
 		}
+			
 
 		//update the sprite orientation
 		if (moveX != 0){
@@ -58,8 +76,23 @@ public class PlayerMovement : MonoBehaviour {
 		}
 	}
 
+	void UpdateShieldDraw(){
+		shieldDraw = (moveY < 0);
+		slowMo = shieldDraw;
+	}
+
 	void Jump(){
-		rigid.AddForce (Vector2.up * jumpForce);
+		rigid.velocity = Vector2.zero;
+		rigid.AddForce (Vector2.up * jumpForce, ForceMode2D.Impulse);
+		canJump = false;
+		grounded = false;
+	}
+
+	public void OnGround(){
+		//player has come in contact with the ground
+		//only called once
+		grounded = true;
+		canJump = true;
 	}
 
 }
