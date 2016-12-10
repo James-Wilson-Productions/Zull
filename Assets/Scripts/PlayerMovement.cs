@@ -46,6 +46,19 @@ public class PlayerMovement : MonoBehaviour {
 		UpdateJumping ();
 		UpdateAnimator ();
 		UpdateLadder ();
+
+		//update the time
+		BendTime();
+	}
+
+	void BendTime(){
+		if (shieldDraw){
+			Time.timeScale = 0.3f;
+			anim.speed = 1 / 0.3f;
+		} else{
+			Time.timeScale = 1;
+			anim.speed = 1;
+		}
 	}
 
 	void UpdateAnimator(){
@@ -66,7 +79,7 @@ public class PlayerMovement : MonoBehaviour {
 		} else if (!shieldDraw && !onIce){
 			rigid.velocity = new Vector2 (1 * speed * moveX, rigid.velocity.y);
 		} else {
-			rigid.velocity = new Vector2 (1 * speed/5 * moveX, rigid.velocity.y);
+			rigid.velocity = new Vector2 (1 * speed * moveX, rigid.velocity.y);
 		}
 			
 
