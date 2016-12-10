@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour {
 	public bool grounded;
 	public bool shieldDraw;
 	public bool onIce;
+	public bool onLadder;
 
 	void Awake(){
 		instance = this;
@@ -38,16 +39,21 @@ public class PlayerMovement : MonoBehaviour {
 		if (!shieldDraw){
 		}
 
-		UpdateMoving ();
-		UpdateShieldDraw ();
+		if (!onLadder){
+			UpdateMoving ();
+			UpdateShieldDraw ();
+		}
 		UpdateJumping ();
 		UpdateAnimator ();
+		UpdateLadder ();
 	}
 
 	void UpdateAnimator(){
 		anim.SetBool ("Moving", moving);
 		anim.SetBool ("Grounded", grounded);
 		anim.SetBool ("ShieldDraw", shieldDraw);
+		anim.SetBool ("Climbing", onLadder);
+		anim.SetInteger ("YSpeed", moveY);
 	}
 		
 	void UpdateMoving(){
@@ -76,6 +82,19 @@ public class PlayerMovement : MonoBehaviour {
 		}
 	}
 
+	void UpdateLadder(){
+		if (onLadder){
+			if (moveY > 0){
+				rigid.velocity = new Vector2 (moveX * speed / 10, moveY * speed / 2);
+			} else if (moveY < 0) {
+				rigid.velocity = new Vector2 (moveX * speed / 10, moveY * speed);
+			} else {
+				rigid.velocity = new Vector2 (moveX * speed / 10, 0);
+			}
+				
+		}
+	}
+
 	void UpdateShieldDraw(){
 		shieldDraw = (moveY < 0);
 		slowMo = shieldDraw;
@@ -93,6 +112,12 @@ public class PlayerMovement : MonoBehaviour {
 		//only called once
 		grounded = true;
 		canJump = true;
+	}
+
+	public void OnLadder(){
+		//player has jumped on the ladder
+		onLadder = true;
+		rigid.isKinematic = true;
 	}
 
 }
