@@ -4,7 +4,7 @@ using System.Collections;
 public class Flipper : MonoBehaviour {
 
 	public Transform flipNode;
-	public float flipDistance;
+	public int flipDistance = 50;
 	public bool flipUp;
 	bool flip;
 	Animator anim;
