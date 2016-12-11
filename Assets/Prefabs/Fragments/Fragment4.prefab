@@ -238,6 +238,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1000010199249726
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000013126968590}
+  m_Layer: 0
+  m_Name: FragmentEndNode
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1000010288238756
 GameObject:
   m_ObjectHideFlags: 1
@@ -1425,6 +1440,21 @@ GameObject:
   m_Name: Platform 8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1000011475484604
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000012602864648}
+  m_Layer: 0
+  m_Name: FragmentStartNode
+  m_TagString: Untagged
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -4632,6 +4662,8 @@ Transform:
   m_Children:
   - {fileID: 4000010511393752}
   - {fileID: 4000010809743390}
+  - {fileID: 4000012602864648}
+  - {fileID: 4000013126968590}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &4000010620991748
@@ -6198,6 +6230,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000014073722760}
   m_RootOrder: 2
+--- !u!4 &4000012602864648
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011475484604}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.01, y: 12.22, z: 0}
+  m_LocalScale: {x: 2.5741577, y: 2.4300072, z: 1.6474614}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 4000010607159696}
+  m_RootOrder: 2
 --- !u!4 &4000012645487922
 Transform:
   m_ObjectHideFlags: 1
@@ -6732,6 +6777,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000012926836982}
   m_RootOrder: 0
+--- !u!4 &4000013126968590
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010199249726}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 100.1, y: 185.1, z: 0}
+  m_LocalScale: {x: 2.5741577, y: 2.4300072, z: 1.6474614}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 4000010607159696}
+  m_RootOrder: 3
 --- !u!4 &4000013177393706
 Transform:
   m_ObjectHideFlags: 1
