@@ -6,6 +6,7 @@ public class Flipper : MonoBehaviour {
 	public Transform flipNode;
 	public float flipDistance;
 	public bool flipUp;
+	bool flip;
 	Animator anim;
 
 	void Awake(){
@@ -21,15 +22,17 @@ public class Flipper : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (getDistance () < flipDistance){
-			if (flipUp){
-				anim.SetTrigger ("FlipUp");
-			} else {
-				anim.SetTrigger ("FlipDown");
-			}
-				
-		} else if (getDistance () > 1.3f * flipDistance){
-			anim.SetTrigger ("FlipIdle");
+			flip = true;
+		} else if (getDistance () > 1.1f * flipDistance){
+			flip = false;
 		}
+
+		if (flipUp) {
+			anim.SetBool ("FlipUp", flip);
+		} else {
+			anim.SetBool ("FlipDown", flip);
+		}
+			
 
 		if (Input.GetKeyDown (KeyCode.Q)){
 			PrintDistance ();
