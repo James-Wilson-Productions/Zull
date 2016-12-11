@@ -32,6 +32,8 @@ public class GroundCheck : MonoBehaviour {
 	void OnTriggerStay2D(Collider2D collider){
 		if (collider.gameObject.layer == LayerMask.NameToLayer ("Ice")){
 			playerMovement.onIce = true;
+		} else if (collider.gameObject.layer == LayerMask.NameToLayer ("Ground")){
+			playerMovement.OnGround ();
 		}
 	}
 }
