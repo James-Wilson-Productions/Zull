@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013974558222}
   - 212: {fileID: 212000013724316196}
+  - 114: {fileID: 114000012200235044}
   m_Layer: 0
   m_Name: Stick1
   m_TagString: Untagged
@@ -40,6 +41,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &114000012200235044
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011222097234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70f2d707ec2334a6bbd1ede9fef3b71d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flipNode: {fileID: 0}
+  flipDistance: 0
+  flipUp: 0
 --- !u!212 &212000013724316196
 SpriteRenderer:
   m_ObjectHideFlags: 1

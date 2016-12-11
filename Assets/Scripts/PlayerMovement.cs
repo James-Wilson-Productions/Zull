@@ -156,19 +156,16 @@ public class PlayerMovement : MonoBehaviour {
 		//only called once
 		grounded = true;
 		canJump = true;
-		print ("on ground");
 	}
 
 	public void OnLadder(){
 		//player has jumped on the ladder
-		print ("Onladder");
 		onLadder = true;
 		rigid.isKinematic = true;
 	}
 
 	public void OffLadder(){
 		//player has jumped on the ladder
-		print ("Offladder");
 		onLadder = false;
 		rigid.isKinematic = false;
 	}
