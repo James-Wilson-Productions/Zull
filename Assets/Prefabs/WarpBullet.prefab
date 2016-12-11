@@ -21,8 +21,8 @@ GameObject:
   - 4: {fileID: 4000014199024000}
   - 212: {fileID: 212000013488682480}
   - 114: {fileID: 114000011900118158}
-  - 61: {fileID: 61000013097004676}
   - 114: {fileID: 114000011872766602}
+  - 58: {fileID: 58000011991775466}
   m_Layer: 0
   m_Name: WarpBullet
   m_TagString: Untagged
@@ -72,8 +72,8 @@ Transform:
   - {fileID: 4000011814268794}
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!61 &61000013097004676
-BoxCollider2D:
+--- !u!58 &58000011991775466
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -85,7 +85,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.46, y: 0.44}
+  m_Radius: 0.54
 --- !u!114 &114000011872766602
 MonoBehaviour:
   m_ObjectHideFlags: 1
