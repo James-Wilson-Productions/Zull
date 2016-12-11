@@ -129,7 +129,7 @@ public class PlayerMovement : MonoBehaviour {
 
 	void UpdateWarp(){
 		if (onWarp){
-			rigid.velocity = new Vector2 (moveX * speed/2, moveY * speed/2);
+			rigid.velocity = new Vector2 (speed/2, moveY * speed);
 			//update the sprite orientation
 			if (moveX != 0){
 				transform.localScale = new Vector3 (moveX, 1, 1);
