@@ -124,6 +124,10 @@ public class PlayerMovement : MonoBehaviour {
 		if (shieldDraw){
 			slowMo = true;
 		}
+
+		if (!shieldDraw && grounded){
+			slowMo = false;
+		}
 			
 	}
 
