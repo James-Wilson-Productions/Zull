@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 845ae78818f067442b6fb690bb17c3b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyAfterSecs: 1000
+  destroyAfterSecs: 10
 --- !u!114 &114000011900118158
 MonoBehaviour:
   m_ObjectHideFlags: 1
