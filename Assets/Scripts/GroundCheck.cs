@@ -27,7 +27,6 @@ public class GroundCheck : MonoBehaviour {
 	}
 
 	void OnTriggerExit2D(Collider2D collider){
-//		playerMovement.grounded = false;
 		playerMovement.onIce = false;
 	}
 

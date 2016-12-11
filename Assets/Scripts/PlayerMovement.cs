@@ -75,6 +75,7 @@ public class PlayerMovement : MonoBehaviour {
 		anim.SetBool ("Climbing", onLadder);
 		anim.SetBool ("OnJumpPad", onJumpPad);
 		anim.SetInteger ("YSpeed", moveY);
+		anim.SetFloat ("YFall", rigid.velocity.y);
 	}
 		
 	void UpdateMoving(){
@@ -121,7 +122,7 @@ public class PlayerMovement : MonoBehaviour {
 
 	void UpdateShieldDraw(){
 		shieldDraw = (moveY < 0);
-		if (shieldDraw){
+		if (shieldDraw && grounded){
 			slowMo = true;
 		}
 
@@ -153,27 +154,28 @@ public class PlayerMovement : MonoBehaviour {
 		//only called once
 		grounded = true;
 		canJump = true;
+		print ("on ground");
 	}
 
 	public void OnLadder(){
 		//player has jumped on the ladder
+		print ("Onladder");
 		onLadder = true;
 		rigid.isKinematic = true;
 	}
 
 	public void OffLadder(){
 		//player has jumped on the ladder
+		print ("Offladder");
 		onLadder = false;
 		rigid.isKinematic = false;
 	}
 
 	public void OnJumpPad(){
-		rigid.isKinematic = true;
 		onJumpPad = true;
 	}
 
 	public void OffJumpPad(){
-		rigid.isKinematic = false;
 		onJumpPad = false;
 	}
 

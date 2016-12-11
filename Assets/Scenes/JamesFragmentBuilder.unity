@@ -5065,6 +5065,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1167644354}
   m_RootOrder: 6
+--- !u!4 &923975472 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4000013554747572, guid: 378c131c9abc03d48b73fd749d350128,
+    type: 2}
+  m_PrefabInternal: {fileID: 16787322}
 --- !u!1 &929320559
 GameObject:
   m_ObjectHideFlags: 0
@@ -7615,7 +7620,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9892e0f69b59144c9bcbbfd7a7ec07e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 923975472}
   smoothing: 5
 --- !u!1001 &1732836547
 Prefab:

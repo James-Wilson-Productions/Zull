@@ -45,7 +45,7 @@ public class JumpPad : MonoBehaviour {
 			} else {
 				motor.motorSpeed = 0f;
 			}
-
+				
 			hinge.motor = motor;
 		}
 	}
