@@ -20,14 +20,14 @@ public class Flipper : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if ((PlayerMovement.instance.transform.position - flipNode.transform.position).magnitude < flipDistance){
+		if (getDistance () < flipDistance){
 			if (flipUp){
 				anim.SetTrigger ("FlipUp");
 			} else {
 				anim.SetTrigger ("FlipDown");
 			}
 				
-		} else{
+		} else if (getDistance () > 1.3f * flipDistance){
 			anim.SetTrigger ("FlipIdle");
 		}
 
@@ -40,5 +40,9 @@ public class Flipper : MonoBehaviour {
 
 	void PrintDistance(){
 		print ((PlayerMovement.instance.transform.position - flipNode.transform.position).magnitude);
+	}
+
+	float getDistance(){
+		return (PlayerMovement.instance.transform.position - flipNode.transform.position).magnitude;
 	}
 }
