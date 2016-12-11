@@ -46,7 +46,7 @@ public class DynamicLight : MonoBehaviour {
 
 	public Material lightMaterial;
 
-	[HideInInspector]public PolygonCollider2D[] allMeshes;									// Array for all of the meshes in our scene
+	[HideInInspector]public Collider2D[] allMeshes;									// Array for all of the meshes in our scene
 
 
 	[HideInInspector] public List<verts> allVertices = new List<verts>();								// Array for all of the vertices in our meshes
@@ -105,10 +105,10 @@ public class DynamicLight : MonoBehaviour {
 
 
 		Collider2D [] allColl2D = Physics2D.OverlapCircleAll(transform.position, lightRadius, layer);
-		allMeshes = new PolygonCollider2D[allColl2D.Length];
+		allMeshes = new Collider2D[allColl2D.Length];
 
 		for (int i=0; i<allColl2D.Length; i++) {
-			allMeshes[i] = (PolygonCollider2D)allColl2D[i];
+			allMeshes[i] = (Collider2D)allColl2D[i];
 		}
 
 
@@ -145,7 +145,7 @@ public class DynamicLight : MonoBehaviour {
 		for (int m = 0; m < allMeshes.Length; m++) {
 		//for (int m = 0; m < 1; m++) {
 			tempVerts.Clear();
-			PolygonCollider2D mf = allMeshes[m];
+			Collider2D mf = allMeshes[m];
 
 			// las siguientes variables usadas para arregla bug de ordenamiento cuando
 			// los angulos calcuados se encuentran en cuadrantes mixtos (1 y 4)
