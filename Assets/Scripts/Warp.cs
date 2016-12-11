@@ -5,6 +5,8 @@ public class Warp : MonoBehaviour {
 
 	public GameObject bullet;
 	public Transform[] spawnPositions;
+	public AnimationClip shootAnimation;
+	public float hello;
 
 	public float shootDelay;
 	float nextShoot;
@@ -29,7 +31,9 @@ public class Warp : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		for (int i = 0; i < 4; i++) {
+			spawnPositions [i].gameObject.GetComponent <Animator> ().speed = (i+1)*0.2f;
+		}
 	}
 	
 	// Update is called once per frame
@@ -50,6 +54,7 @@ public class Warp : MonoBehaviour {
 					transform.rotation.y, 180));
 //				Instantiate (bullet, spawnPositions[spawnPoint2].position, Quaternion.Euler (transform.rotation.x,
 //					transform.rotation.y, 180));
+				spawnPositions [spawnPoint1].gameObject.GetComponent <Animator> ().SetTrigger ("FunnelShoot");
 			}
 		}
 	}

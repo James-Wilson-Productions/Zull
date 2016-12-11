@@ -15,5 +15,9 @@ public class Bullet : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         transform.position += -transform.right * Time.deltaTime * speed;
+
+		if (PlayerMovement.instance.onWarp){
+			transform.position += -transform.right * Time.deltaTime * speed*3;
+		}
 	}
 }
