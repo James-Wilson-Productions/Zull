@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour {
 	public bool onIce;
 	public bool onLadder;
 	public bool onJumpPad;
+	public bool onWarp;
 	bool canMove;
 
 	void Awake(){
@@ -39,7 +40,7 @@ public class PlayerMovement : MonoBehaviour {
 		moveX = (int)Input.GetAxisRaw ("Horizontal");
 		moveY = (int)Input.GetAxisRaw ("Vertical");
 
-		if (!onLadder && !onJumpPad){
+		if (!onLadder && !onJumpPad && !onWarp){
 			if (canMove){
 				UpdateMoving ();
 			}
@@ -50,13 +51,15 @@ public class PlayerMovement : MonoBehaviour {
 		UpdateAnimator ();
 		UpdateLadder ();
 		UpdateJumpPad ();
+		UpdateWarp ();
 
 		//update the time
 		BendTime();
 	}
 
 	void BendTime(){
-		if (shieldDraw){
+		//will make time slow do i slowmo is true
+		if (slowMo){
 			Time.timeScale = 0.3f;
 			anim.speed = 1 / 0.3f;
 		} else{
@@ -118,7 +121,20 @@ public class PlayerMovement : MonoBehaviour {
 
 	void UpdateShieldDraw(){
 		shieldDraw = (moveY < 0);
-		slowMo = shieldDraw;
+		if (shieldDraw){
+			slowMo = true;
+		}
+			
+	}
+
+	void UpdateWarp(){
+		if (onWarp){
+			rigid.velocity = new Vector2 (moveX * speed/2, moveY * speed/2);
+			//update the sprite orientation
+			if (moveX != 0){
+				transform.localScale = new Vector3 (moveX, 1, 1);
+			}
+		}
 	}
 
 	void Jump(){
@@ -171,6 +187,18 @@ public class PlayerMovement : MonoBehaviour {
 			transform.localScale = new Vector3 (-1,1,1);
 		}
 		StartCoroutine (DontMove(airTime));
+	}
+
+	public void OnWarp(){
+		rigid.isKinematic = true;
+		onWarp = true;
+		slowMo = true;
+	}
+
+	public void OffWarp(){
+		rigid.isKinematic = false;
+		onWarp = false;
+		slowMo = false;
 	}
 
 	IEnumerator DontMove(float airTime){
