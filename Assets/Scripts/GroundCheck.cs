@@ -17,6 +17,8 @@ public class GroundCheck : MonoBehaviour {
 		} else if (collider.gameObject.layer == LayerMask.NameToLayer ("Ice")){
 			if (!collider.GetComponent <Ice>().canJump){
 				playerMovement.canJump = false;
+			} else {
+				playerMovement.canJump = true;
 			}
 			playerMovement.grounded = true;
 			playerMovement.onIce = true;
