@@ -201,8 +201,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86ac964ff1c7f41b5ba976e963d942ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 82000013930354532}
-  ElevatorSource: {fileID: 82000012684540412}
+  ShroudSFX: {fileID: 82000013930354532}
+  SFX: {fileID: 82000012684540412}
   Volume: 1
   JumpPad:
   - {fileID: 8300000, guid: 416d5ce371773804ab153c0649201325, type: 3}

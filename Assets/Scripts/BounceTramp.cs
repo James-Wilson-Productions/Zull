@@ -17,7 +17,7 @@ public class BounceTramp : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other){
         if (other.tag == "Player") {
-            //TODO: Insert Hydraulic swoosh sound here
+			SoundManager.instance.PlayJumpPad ();
 			PlayerMovement.instance.grounded = false;
             anim.SetTrigger("DisperseParticle");
             rigid = other.GetComponent<Rigidbody2D>();

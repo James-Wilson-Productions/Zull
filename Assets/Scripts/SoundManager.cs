@@ -6,8 +6,8 @@ public class SoundManager : MonoBehaviour {
 
 	public static SoundManager instance;
 
-	public AudioSource Player;
-	public AudioSource ElevatorSource;
+	public AudioSource ShroudSFX;
+	public AudioSource SFX;
     public float Volume;
 
 	public AudioClip[] JumpPad;
@@ -46,89 +46,89 @@ public class SoundManager : MonoBehaviour {
 	}
 
 	public void PlayDeath(){
-		Player.clip = Death;
+		ShroudSFX.clip = Death;
 		AutoPlay ();
 	}
 
 	public void PlayElevator(){
-		Player.clip = Elevator;
-		Player.Play ();
+		ShroudSFX.clip = Elevator;
+		ShroudSFX.Play ();
 	}
 	public void PlayWalk(){
 		if (walk){
-			Player.clip = FootStep1;
+			ShroudSFX.clip = FootStep1;
 		} else{
-			Player.clip = FootStep2;
+			ShroudSFX.clip = FootStep2;
 		}
 		walk = !walk;
 		Play ();
 	}
 	public void PlayJump(){
-		Player.clip = Jump;
+		ShroudSFX.clip = Jump;
 		AutoPlay ();
 	}
 	public void PlayJumpPad(){
-		Player.clip = JumpPad[Random.Range (0, JumpPad.Length)];
-		AutoPlay ();
+		SFX.clip = JumpPad[Random.Range (0, JumpPad.Length)];
+		SFXAutoPlay ();
 	}
 	public void PlayLadderClimb(){
-		Player.clip = LadderClimb;
+		ShroudSFX.clip = LadderClimb;
 		AutoPlay ();
 	}
 	public void PlayLadderHeadHit(){
-		Player.clip = LadderHeadHit;
+		ShroudSFX.clip = LadderHeadHit;
 		Play ();
 	}
 	public void PlayLadderSlideLoop(){
-		Player.clip = LadderSlideLoop;
-		Play ();
+		SFX.clip = LadderSlideLoop;
+		SFXAutoPlay ();
 	}
 	public void PlayPlatformIn(){
-		Player.clip = PlatformIn;
-		Play ();
+		SFX.clip = PlatformIn;
+		SFXAutoPlay ();
 	}
 	public void PlayShieldDeploy(){
-		Player.clip = ShieldDeploy;
+		ShroudSFX.clip = ShieldDeploy;
 		AutoPlay ();
 	}
 	public void PlayShieldHit(){
-		Player.clip = ShieldHit;
+		ShroudSFX.clip = ShieldHit;
 		AutoPlay ();
 	}
 	public void PlaySplat(){
-		Player.clip = Splat[Random.Range (0, Splat.Length)];
+		ShroudSFX.clip = Splat[Random.Range (0, Splat.Length)];
 		AutoPlay ();
 	}
 	public void PlaySpongePadUp(){
-		Player.clip = SpongePadUp;
-		AutoPlay ();
+		SFX.clip = SpongePadUp;
+		SFXAutoPlay ();
 	}
 	public void PlaySpongePadDown(){
-		Player.clip = SpongePadDown;
-		AutoPlay ();
+		SFX.clip = SpongePadDown;
+		SFXAutoPlay ();
 	}
 	public void PlayThud(){
-		Player.clip = Thud[Random.Range (0, Thud.Length)];
+		ShroudSFX.clip = Thud[Random.Range (0, Thud.Length)];
 		AutoPlay ();
 	}
 	public void PlayTurretShoot(){
-		Player.clip = TurretShoot;
-		AutoPlay ();
+		SFX.clip = TurretShoot;
+		SFXAutoPlay ();
 	}
 	public void PlayTurretStartUp(){
 		print ("insert turret start up sound");
 	}
 	public void PlayWarp(){
-		Player.clip = Warp;
-		Play ();
+		SFX.clip = Warp;
+		SFXAutoPlay ();
 	}
 
 	void BendPitch(){
-		Player.pitch = Random.Range (lowPitch, highPitch);
+		ShroudSFX.pitch = Random.Range (lowPitch, highPitch);
 	}
 
 	void BendVolume(){
-		Player.volume = Random.Range (lowVolume, highVolume);
+		ShroudSFX.volume = Random.Range (lowVolume, highVolume);
 	}
 
 	void Bend(){
@@ -137,8 +137,8 @@ public class SoundManager : MonoBehaviour {
 	}
 
 	void Reset(){
-		Player.pitch = 1;
-		Player.volume = Volume;
+		ShroudSFX.pitch = 1;
+		ShroudSFX.volume = Volume;
 	}
 
 	void AutoPlay(){
@@ -146,12 +146,17 @@ public class SoundManager : MonoBehaviour {
 		Play ();
 	}
 
+	void SFXAutoPlay(){
+		SFX.PlayOneShot (SFX.clip);
+	}
+
 	void Play(){
-		Player.PlayOneShot (Player.clip);
+		ShroudSFX.PlayOneShot (ShroudSFX.clip);
 //		Reset ();
 	}
 
 	void SetVolume(float value){
-		Player.volume = value;
+		ShroudSFX.volume = value;
+		SFX.volume = value;
 	}
 }
