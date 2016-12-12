@@ -13,6 +13,7 @@ public class MusicManager : MonoBehaviour {
 	public AudioMixerSnapshot mainMenu;
 	public AudioSource StabSource;
 	public AudioMixerGroup Master;
+	public AudioMixerSnapshot MuteAudio;
 
 	public float Volume;
 	public float transitionIn;
@@ -61,4 +62,8 @@ public class MusicManager : MonoBehaviour {
             music[i].Play();
         }
     }
+
+	public void Mute(){
+		MuteAudio.TransitionTo (5);
+	}
 }

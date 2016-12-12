@@ -2673,6 +2673,12 @@ Prefab:
       propertyPath: music.Array.data[4]
       value: 
       objectReference: {fileID: 95550039}
+    - target: {fileID: 114000012254087404, guid: 796aac74677844521976786aba0d0242,
+        type: 2}
+      propertyPath: MuteAudio
+      value: 
+      objectReference: {fileID: 245000010436842618, guid: 60ae3f69a2d1b477d9b5fab4cc939ec6,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 796aac74677844521976786aba0d0242, type: 2}
   m_IsPrefabParent: 0

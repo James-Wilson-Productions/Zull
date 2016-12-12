@@ -526,5 +526,7 @@ MonoBehaviour:
   mainMenu: {fileID: 245000012611548936, guid: 60ae3f69a2d1b477d9b5fab4cc939ec6, type: 2}
   StabSource: {fileID: 82000012068527454}
   Master: {fileID: 243000010159253830, guid: 60ae3f69a2d1b477d9b5fab4cc939ec6, type: 2}
+  MuteAudio: {fileID: 245000010436842618, guid: 60ae3f69a2d1b477d9b5fab4cc939ec6,
+    type: 2}
   Volume: 0
   transitionIn: 0
