@@ -13,15 +13,17 @@ public class MusicManager : MonoBehaviour {
 	public AudioMixerSnapshot mainMenu;
 	public AudioSource StabSource;
 	public AudioMixerGroup Master;
+	public AudioMixerSnapshot MuteAudio;
 
 	public float Volume;
 	public float transitionIn;
+	int currentNumber;
 
 	void Awake(){
 		if (instance == null){
 			instance = GameObject.FindObjectOfType <MusicManager>().GetComponent <MusicManager>();
 		}
-
+		currentNumber = 2;
 	}
 
 	// Use this for initialization
@@ -33,10 +35,21 @@ public class MusicManager : MonoBehaviour {
 	public void Transition(){
 		//will change the track to one of the game tracks
 		int trackNumber = Random.Range (0, trackStates.Length);
-		trackStates [trackNumber].TransitionTo (transitionIn);
+		if (trackNumber == currentNumber){
+			currentNumber = (trackNumber + 1) % trackStates.Length;
+		} else{
+			currentNumber = trackNumber;
+		}
+		trackStates [currentNumber].TransitionTo (transitionIn);
+		print ("track: " + currentNumber);
 
 		//play stab
 		PlayStab ();
+	}
+
+	public void TransitionSpecific(int i){
+		//will play a specific song
+		trackStates [i].TransitionTo (transitionIn);
 	}
 
 	public void TransitionMainMenu(){
@@ -61,4 +74,8 @@ public class MusicManager : MonoBehaviour {
             music[i].Play();
         }
     }
+
+	public void Mute(){
+		MuteAudio.TransitionTo (5);
+	}
 }

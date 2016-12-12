@@ -47,7 +47,7 @@ public class FragmentManager : MonoBehaviour {
 			int i = Random.Range (0, fragments.Length);
 			//makes sure there are no repeating fragments
 			if (i == currentFragment){
-				i = (i + 1) % (fragments.Length-1);
+				i = (i + 1) % (fragments.Length);
 			} else{
 				currentFragment = i;
 			}

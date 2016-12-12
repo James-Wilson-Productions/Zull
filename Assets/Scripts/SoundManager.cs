@@ -6,7 +6,8 @@ public class SoundManager : MonoBehaviour {
 
 	public static SoundManager instance;
 
-	AudioSource Player;
+	public AudioSource Player;
+	public AudioSource ElevatorSource;
 	public float Volume;
 
 	public AudioClip[] JumpPad;
@@ -45,7 +46,6 @@ public class SoundManager : MonoBehaviour {
 	}
 
 	void Start(){
-		Player = GetComponent <AudioSource> ();
 	}
 
 	public void PlayDeath(){
@@ -54,8 +54,8 @@ public class SoundManager : MonoBehaviour {
 	}
 
 	public void PlayElevator(){
-		Player.clip = Elevator;
-		Player.Play ();
+		ElevatorSource.clip = Elevator;
+		ElevatorSource.Play ();
 	}
 	public void PlayWalk(){
 		if (walk){
