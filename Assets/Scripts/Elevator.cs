@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Text;
 
 public class Elevator : MonoBehaviour {
 
@@ -9,18 +10,20 @@ public class Elevator : MonoBehaviour {
 	void Start () {
 		anim = GetComponent <Animator> ();
 		StartCoroutine (OpenElevator());
+		PlayerMovement.instance.enabled = false;
         RenderSettings.ambientLight = MainMenu.ambientLighting;
 	}
 
 	IEnumerator OpenElevator(){
 		yield return new WaitForEndOfFrame ();
+		MusicManager.instance.Mute ();
 		SoundManager.instance.PlayElevator ();
-        PlayerMovement.instance.canMove = false;
 		yield return new WaitForSeconds (10.612f);
 		anim.SetBool ("openElevator", true);
         yield return new WaitForSeconds(2f);
-        PlayerMovement.instance.canMove = true;
+        PlayerMovement.instance.enabled = true;
         MusicManager.instance.PlayMusic();
+		MusicManager.instance.TransitionSpecific (2);
 	}
 
 }
