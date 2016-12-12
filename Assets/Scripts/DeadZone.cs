@@ -4,6 +4,7 @@ using System.Collections;
 public class DeadZone : MonoBehaviour {
 
 	public int deadZoneTime;
+	public Transform spawnPosition;
 
 	void OnTriggerEnter2D(Collider2D collider){
 		if (collider.tag == "Player"){
@@ -15,7 +16,12 @@ public class DeadZone : MonoBehaviour {
 
 	void KillPlayer(){
 		if (!PlayerMovement.instance.isDead()){
-			PlayerMovement.instance.Die ();
+			if (spawnPosition == null){
+				PlayerMovement.instance.Die (FragmentManager.instance.transform.position, false);
+			} else{
+				PlayerMovement.instance.Die (spawnPosition.transform.position, true);
+			}
+				
 		}
 	}
 	// Use this for initialization

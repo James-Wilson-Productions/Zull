@@ -94,7 +94,6 @@ public class FragmentManager : MonoBehaviour {
 		Next = newFragment.GetComponent <Fragment> ();
 
 		PlayerMovement.instance.transform.position = initialPlatform.transform.position;
-		PlayerMovement.instance.Revive ();
 		CameraController.instance.transform.position = PlayerMovement.instance.transform.position;
 	}
 

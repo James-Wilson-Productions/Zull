@@ -223,18 +223,23 @@ public class PlayerMovement : MonoBehaviour {
 		slowMo = false;
 	}
 
-	public void Die(){
+	public void Die(Vector3 spawnPosition, bool TutorialMode){
 		SoundManager.instance.PlaySplat ();
 		dead = true;
 		anim.SetTrigger ("Dead");
-		StartCoroutine (Revive());
+		StartCoroutine (Revive(spawnPosition, TutorialMode));
 	}
 
-	public IEnumerator Revive(){
+	public IEnumerator Revive(Vector3 spawnPosition, bool TutorialMode){
 		dead = false;
 		yield return new WaitForSeconds(1.5f);
 		anim.SetTrigger ("Revive");
-		FragmentManager.instance.Revive();
+		if (!TutorialMode){
+			FragmentManager.instance.Revive();
+		} else {
+			transform.position = spawnPosition;
+		}
+			
 	}
 
 	public bool isDead(){
