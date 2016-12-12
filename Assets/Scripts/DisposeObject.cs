@@ -8,4 +8,8 @@ public class DisposeObject : MonoBehaviour {
 	void Start () {
         Destroy(gameObject, destroyAfterSecs);
 	}
+
+	public void removeInstantly(){
+		Destroy (gameObject);
+	}
 }
