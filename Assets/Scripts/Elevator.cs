@@ -9,6 +9,7 @@ public class Elevator : MonoBehaviour {
 	void Start () {
 		anim = GetComponent <Animator> ();
 		StartCoroutine (OpenElevator());
+        RenderSettings.ambientLight = MainMenu.ambientLighting;
 	}
 
 	IEnumerator OpenElevator(){
