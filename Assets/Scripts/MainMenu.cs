@@ -39,10 +39,11 @@ public class MainMenu : MonoBehaviour {
     }
 
     public void musicSlider() {
-        //TODO: Insert MusicManager.instance.Volume = to music.value here
+        //MusicManager.instance.SetVolume(music.value);
     }
 
     public void gammaSlider() {
-        //TODO: Insert light brightness = to gamma.value here
+        float gammaColor = gamma.value * 2.5f;
+        RenderSettings.ambientLight = new Color(gammaColor, gammaColor, gammaColor, 0);
     }
 }
