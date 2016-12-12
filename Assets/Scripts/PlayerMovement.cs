@@ -25,17 +25,18 @@ public class PlayerMovement : MonoBehaviour {
 	public bool onJumpPad;
 	public bool onWarp;
 	public bool canMove;
+	bool dead;
+
 	//temp
 	public bool TutorialMode;
 	public Vector3 spawnPosition;
-	bool dead;
 
 	//warp clamps
 	float warpPos;
 	float warpClamp;
 
 	//when the player drops below this point, the game will end
-	float yDiePosition;
+	public float yDiePosition;
 
 	void Awake(){
 		instance = this;
@@ -142,7 +143,11 @@ public class PlayerMovement : MonoBehaviour {
 			if (!TutorialMode){
 				Die (transform.position, false);
 			} else {
+<<<<<<< HEAD
 				Die (spawnPosition, true);
+=======
+                Die(spawnPosition, true);
+>>>>>>> 367ff4764a1502052f3bd2e0bc5b9979d90f21cd
 			}
 				
 		}
