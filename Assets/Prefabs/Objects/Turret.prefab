@@ -301,7 +301,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011217993088}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.1399994, y: 1.6127071, z: 3.4593909}
+  m_LocalPosition: {x: 4.1399994, y: 1.6127071, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -356,7 +356,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010186504326}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 96.8, y: 13.961092, z: 0.000009120494}
+  m_LocalPosition: {x: 234.7, y: 3.14, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -458,9 +458,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: -32.86, y: 3.6158314}
+  m_Offset: {x: -48.124504, y: 3.6158316}
   serializedVersion: 2
-  m_Size: {x: 42.78238, y: 14.993271}
+  m_Size: {x: 73.31124, y: 14.993271}
 --- !u!95 &95000012118130894
 Animator:
   serializedVersion: 3
@@ -542,7 +542,7 @@ ParticleSystem:
   moveWithTransform: 1
   autoRandomSeed: 1
   scalingMode: 2
-  randomSeed: 339847390
+  randomSeed: -1930405850
   InitialModule:
     serializedVersion: 2
     enabled: 1
@@ -2256,7 +2256,7 @@ ParticleSystem:
   moveWithTransform: 1
   autoRandomSeed: 1
   scalingMode: 2
-  randomSeed: 1519652331
+  randomSeed: 961426306
   InitialModule:
     serializedVersion: 2
     enabled: 1
@@ -3970,7 +3970,7 @@ ParticleSystem:
   moveWithTransform: 1
   autoRandomSeed: 1
   scalingMode: 2
-  randomSeed: -1944599886
+  randomSeed: -1196184826
   InitialModule:
     serializedVersion: 2
     enabled: 1
