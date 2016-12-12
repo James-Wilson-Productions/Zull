@@ -8,7 +8,7 @@ public class SoundManager : MonoBehaviour {
 
 	public AudioSource Player;
 	public AudioSource ElevatorSource;
-	public float Volume;
+    public float Volume;
 
 	public AudioClip[] JumpPad;
 	public AudioClip[] Splat;
@@ -45,17 +45,14 @@ public class SoundManager : MonoBehaviour {
 			
 	}
 
-	void Start(){
-	}
-
 	public void PlayDeath(){
 		Player.clip = Death;
 		AutoPlay ();
 	}
 
 	public void PlayElevator(){
-		ElevatorSource.clip = Elevator;
-		ElevatorSource.Play ();
+		Player.clip = Elevator;
+		Player.Play ();
 	}
 	public void PlayWalk(){
 		if (walk){
