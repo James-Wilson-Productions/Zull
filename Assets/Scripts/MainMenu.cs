@@ -42,7 +42,7 @@ public class MainMenu : MonoBehaviour {
     }
 
     public void musicSlider() {
-        //MusicManager.instance.SetVolume(music.value);
+        GameObject.FindObjectOfType<MusicManager>().GetComponent<MusicManager>().SetVolume(music.value);
     }
 
     public void gammaSlider() {

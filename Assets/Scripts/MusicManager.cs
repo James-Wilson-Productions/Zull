@@ -51,7 +51,8 @@ public class MusicManager : MonoBehaviour {
 	}
 
 	public void SetVolume(float value){
-		Master.audioMixer.SetFloat ("MUsicVolume", value);
 		Volume = value;
+		Master.audioMixer.SetFloat ("MusicVolume", Volume);
+        print(Volume);
 	}
 }
