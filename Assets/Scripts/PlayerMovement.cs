@@ -25,6 +25,9 @@ public class PlayerMovement : MonoBehaviour {
 	public bool onJumpPad;
 	public bool onWarp;
 	public bool canMove;
+	//temp
+	public bool TutorialMode;
+	public Vector3 spawnPosition;
 	bool dead;
 
 	//warp clamps
@@ -60,6 +63,7 @@ public class PlayerMovement : MonoBehaviour {
 		UpdateLadder ();
 		UpdateJumpPad ();
 		UpdateWarp ();
+		UpdatePosition ();
 
 		//update the time
 		BendTime();
@@ -129,6 +133,18 @@ public class PlayerMovement : MonoBehaviour {
 				rigid.velocity = new Vector2 (moveX * speed / 4, 0);
 			}
 
+		}
+	}
+
+	void UpdatePosition(){
+		//checks if the player is above the kill line
+		if (transform.position.y < yDiePosition){
+			if (!TutorialMode){
+				Die (transform.position, false);
+			} else {
+				Die(spawnPosition, true)
+			}
+				
 		}
 	}
 
