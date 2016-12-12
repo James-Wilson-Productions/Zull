@@ -41,7 +41,6 @@ public class MusicManager : MonoBehaviour {
 			currentNumber = trackNumber;
 		}
 		trackStates [currentNumber].TransitionTo (transitionIn);
-		print ("track: " + currentNumber);
 
 		//play stab
 		PlayStab ();

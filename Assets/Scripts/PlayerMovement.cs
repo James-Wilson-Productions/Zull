@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour {
 	public bool onJumpPad;
 	public bool onWarp;
 	public bool canMove;
+	bool dead;
 
 	//warp clamps
 	float warpPos;
@@ -224,6 +225,19 @@ public class PlayerMovement : MonoBehaviour {
 
 	public void Die(){
 		SoundManager.instance.PlaySplat ();
+		dead = true;
+		anim.SetTrigger ("Dead");
+		StartCoroutine (Revive());
+	}
+
+	public IEnumerator Revive(){
+		dead = false;
+		yield return new WaitForSeconds(1.5f);
+		anim.SetTrigger ("Revive");
+	}
+
+	public bool isDead(){
+		return dead;
 	}
 
 	IEnumerator DontMove(float airTime){

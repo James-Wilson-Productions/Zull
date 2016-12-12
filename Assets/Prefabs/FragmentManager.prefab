@@ -59,3 +59,4 @@ MonoBehaviour:
   - {fileID: 1000014268493530, guid: 7bb731bdf668799419eb60c295783091, type: 2}
   initial: {fileID: 0}
   loadDistance: 30
+  transitionNumber: 5
