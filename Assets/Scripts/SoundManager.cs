@@ -142,13 +142,13 @@ public class SoundManager : MonoBehaviour {
 	}
 
 	void AutoPlay(){
-		Bend ();
+//		Bend ();
 		Play ();
 	}
 
 	void Play(){
-		Player.Play ();
-		Reset ();
+		Player.PlayOneShot (Player.clip);
+//		Reset ();
 	}
 
 	void SetVolume(float value){

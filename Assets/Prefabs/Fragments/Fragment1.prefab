@@ -99,6 +99,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000013118370994}
+  - 114: {fileID: 114000010821364402}
   m_Layer: 0
   m_Name: Fragment1
   m_TagString: Untagged
@@ -16772,6 +16773,18 @@ MonoBehaviour:
   anim: {fileID: 95000011588654194}
   power: 90
   airTime: 1
+--- !u!114 &114000010821364402
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010075157510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 911f333d03fbb4f1ebe47941b701a300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endNode: {fileID: 4000013266907448}
 --- !u!114 &114000010845213220
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -125,6 +125,9 @@ public class PlayerMovement : MonoBehaviour {
 	}
 
 	void UpdateShieldDraw(){
+		if (!shieldDraw && moveY < 0){
+			SoundManager.instance.PlayShieldDeploy ();
+		}
 		shieldDraw = (moveY < 0);
 		if (shieldDraw && grounded){
 			slowMo = true;
