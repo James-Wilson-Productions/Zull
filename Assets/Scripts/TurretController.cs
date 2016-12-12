@@ -33,6 +33,11 @@ public class TurretController : MonoBehaviour {
     IEnumerator WaitForShoot() {
         SoundManager.instance.PlayTurretStartUp ();
         yield return new WaitForSeconds(0.4f);
-        animController.SetBool("Shoot", true);
+        while (true) {
+            animController.SetBool("Shoot", true);
+            yield return new WaitForSeconds(2);
+            animController.SetBool("Shoot", false);
+            yield return new WaitForSeconds(0.5f);
+        }
     }
 }
