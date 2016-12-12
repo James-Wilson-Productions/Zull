@@ -54,6 +54,13 @@ public class FragmentManager : MonoBehaviour {
 			print ("fragment number: " + i);
 			GameObject newFragment = Instantiate (fragments [currentFragment], Current.endNode.position, transform.rotation) as GameObject;
 			Next = newFragment.GetComponent <Fragment> ();
+
+			//change the track
+
+		}
+
+		if (Input.GetKeyDown (KeyCode.Q)){
+			MusicManager.instance.Transition ();
 		}
 	}
 
