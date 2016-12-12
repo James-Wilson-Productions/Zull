@@ -19,6 +19,7 @@ public class Elevator : MonoBehaviour {
 		anim.SetBool ("openElevator", true);
         yield return new WaitForSeconds(2f);
         MusicManager.instance.PlayMusic();
+		MusicManager.instance.TransitionSpecific (2);
 	}
 
 }
