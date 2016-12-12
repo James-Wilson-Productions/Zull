@@ -38,7 +38,10 @@ public class SoundManager : MonoBehaviour {
 
 	void Awake(){
 		DontDestroyOnLoad (gameObject);
-		instance = this;
+		if (instance == null){
+			instance = GameObject.FindObjectOfType <SoundManager>().GetComponent <SoundManager>();
+		}
+			
 	}
 
 	void Start(){

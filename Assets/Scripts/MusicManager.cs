@@ -18,7 +18,7 @@ public class MusicManager : MonoBehaviour {
 
 	void Awake(){
 		if (instance == null){
-			instance = this;
+			instance = GameObject.FindObjectOfType <MusicManager>().GetComponent <MusicManager>();
 		}
 
 	}
