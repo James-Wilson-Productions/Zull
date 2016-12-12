@@ -31,6 +31,9 @@ public class PlayerMovement : MonoBehaviour {
 	float warpPos;
 	float warpClamp;
 
+	//when the player drops below this point, the game will end
+	float yDiePosition;
+
 	void Awake(){
 		instance = this;
 		canMove = true;
