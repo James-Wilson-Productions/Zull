@@ -19,6 +19,7 @@ public class SoundReference : MonoBehaviour {
 		SoundManager.instance.PlayLadderSlideLoop ();
 	}
 	public void PlayShieldDeploy(){
+		print ("shield Deploy");
 		SoundManager.instance.PlayShieldDeploy ();
 	}
 	public void PlayWalk(){
