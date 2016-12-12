@@ -17,7 +17,7 @@ public class Bullet : MonoBehaviour {
         transform.position += -transform.right * Time.deltaTime * speed;
 
 		if (PlayerMovement.instance.onWarp){
-			transform.position += -transform.right * Time.deltaTime * speed*1.5f;
+			transform.position += -transform.right * Time.deltaTime * speed * 1.5f;
 		}
 	}
 

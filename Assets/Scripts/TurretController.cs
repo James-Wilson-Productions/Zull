@@ -14,7 +14,7 @@ public class TurretController : MonoBehaviour {
 	}
 
     void Shoot() {
-		SoundManager.instance.PlayTurretShoot ();
+		SoundManager.instance.PlayTurretShoot();
         GameObject instance = (GameObject) Instantiate(bullet, turretMuzzle.position, transform.rotation);
         instance.transform.SetParent(turretBullets);
     }
@@ -31,7 +31,7 @@ public class TurretController : MonoBehaviour {
     }
 
     IEnumerator WaitForShoot() {
-		SoundManager.instance.PlayTurretStartUp ();
+        SoundManager.instance.PlayTurretStartUp ();
         yield return new WaitForSeconds(0.4f);
         animController.SetBool("Shoot", true);
     }
