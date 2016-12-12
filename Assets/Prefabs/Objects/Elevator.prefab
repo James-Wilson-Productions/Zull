@@ -37,6 +37,8 @@ GameObject:
   m_Component:
   - 224: {fileID: 224000013403402344}
   - 95: {fileID: 95000013141632858}
+  - 114: {fileID: 114000012174077146}
+  - 114: {fileID: 114000012630708984}
   m_Layer: 5
   m_Name: Elevator Rig
   m_TagString: Untagged
@@ -236,6 +238,29 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114000012174077146
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010629759876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 845ae78818f067442b6fb690bb17c3b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyAfterSecs: 50
+--- !u!114 &114000012630708984
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010629759876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8df935efaa2b1474bb89ccb9a4ac58c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000013031662242
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -59,6 +59,10 @@ public class PlayerMovement : MonoBehaviour {
 
 		//update the time
 		BendTime();
+
+		if (Input.GetKeyDown (KeyCode.Q)){
+			MusicManager.instance.Transition ();
+		}
 	}
 
 	void BendTime(){
