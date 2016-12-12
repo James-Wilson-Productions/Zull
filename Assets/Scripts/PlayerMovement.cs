@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour {
 	public bool onLadder;
 	public bool onJumpPad;
 	public bool onWarp;
-	bool canMove;
+	public bool canMove;
 
 	//warp clamps
 	float warpPos;

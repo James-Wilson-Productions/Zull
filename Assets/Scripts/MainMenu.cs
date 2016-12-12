@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour {
 
+    public static Color ambientLighting;
+
     bool settingsOpen;
 
     Animator anim;
@@ -47,5 +49,6 @@ public class MainMenu : MonoBehaviour {
 
     public void gammaSlider() {
         RenderSettings.ambientLight = new Color(gamma.value, gamma.value, gamma.value, 1);
+        ambientLighting = RenderSettings.ambientLight;
     }
 }
