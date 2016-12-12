@@ -475,8 +475,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013181089740}
-  m_LocalRotation: {x: 0, y: -0.37573907, z: 0, w: 0.9267255}
-  m_LocalPosition: {x: 32.1, y: 0, z: -25.99}
+  m_LocalRotation: {x: -0, y: -0.3757391, z: -0, w: 0.92672557}
+  m_LocalPosition: {x: 24.40001, y: -0, z: -25.99}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: -44.14, z: 0}
   m_Children: []
@@ -528,7 +528,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013245847682}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 8.9, z: 0}
+  m_LocalPosition: {x: 84.6, y: 14.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_Children:
@@ -568,7 +568,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011299525586}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.2853007, w: 0.95843804}
   m_LocalPosition: {x: 2.0800004, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 111}
@@ -602,9 +602,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010715925234}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.7803378, y: 3.7803388, z: 3.7803388}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -7.7, y: 0, z: 0}
+  m_LocalScale: {x: 3.7803407, y: 3.7803416, z: 3.7803388}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 360}
   m_Children:
   - {fileID: 4000010968389122}
@@ -721,9 +721,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 7.900059, y: -34.331066}
+  m_Offset: {x: 0, y: -35.9}
   serializedVersion: 2
-  m_Size: {x: 11.3, y: 72.560265}
+  m_Size: {x: 2.69, y: 72.26}
 --- !u!95 &95000010270052036
 Animator:
   serializedVersion: 3
@@ -1024,15 +1024,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef6727cc181ac438bb5417080f8ba9ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 1000011473607138, guid: 7bb48f927cd0c4faeb82de0d17aed0f4, type: 2}
-  spawnPositions:
-  - {fileID: 4000013392523604}
-  - {fileID: 4000012471731350}
-  - {fileID: 4000010067148230}
-  - {fileID: 4000013577041494}
-  shootAnimation: {fileID: 0}
-  hello: 0
-  shootDelay: 0.5
 --- !u!198 &198000010672229160
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -1083,7 +1074,7 @@ ParticleSystem:
   moveWithTransform: 1
   autoRandomSeed: 1
   scalingMode: 2
-  randomSeed: -332367108
+  randomSeed: 1497719498
   InitialModule:
     serializedVersion: 2
     enabled: 1
@@ -4541,7 +4532,7 @@ ParticleSystem:
   moveWithTransform: 0
   autoRandomSeed: 1
   scalingMode: 2
-  randomSeed: 635936656
+  randomSeed: 1703113362
   InitialModule:
     serializedVersion: 2
     enabled: 1
@@ -6300,7 +6291,7 @@ ParticleSystem:
   moveWithTransform: 0
   autoRandomSeed: 1
   scalingMode: 2
-  randomSeed: 1695127361
+  randomSeed: 366336873
   InitialModule:
     serializedVersion: 2
     enabled: 1
@@ -8054,7 +8045,7 @@ ParticleSystem:
   moveWithTransform: 0
   autoRandomSeed: 1
   scalingMode: 2
-  randomSeed: -1685986951
+  randomSeed: 307606397
   InitialModule:
     serializedVersion: 2
     enabled: 1
