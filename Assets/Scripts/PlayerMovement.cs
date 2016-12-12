@@ -142,7 +142,7 @@ public class PlayerMovement : MonoBehaviour {
 			if (!TutorialMode){
 				Die (transform.position, false);
 			} else {
-				Die(spawnPosition, true)
+				Die (spawnPosition, true);
 			}
 				
 		}
