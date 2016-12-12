@@ -14,6 +14,9 @@ public class MainMenu : MonoBehaviour {
     void Awake() {
         anim = GetComponent<Animator>();
         sfx = GameObject.Find("SFX").GetComponent<Slider>();
+        music = GameObject.Find("Music").GetComponent<Slider>();
+        gamma = GameObject.Find("Gamma").GetComponent<Slider>();
+        RenderSettings.ambientLight = new Color(0.2f, 0.2f, 0.2f, 1);
     }
 
     public void startGame() {
@@ -43,7 +46,6 @@ public class MainMenu : MonoBehaviour {
     }
 
     public void gammaSlider() {
-        float gammaColor = gamma.value * 2.5f;
-        RenderSettings.ambientLight = new Color(gammaColor, gammaColor, gammaColor, 0);
+        RenderSettings.ambientLight = new Color(gamma.value, gamma.value, gamma.value, 1);
     }
 }
