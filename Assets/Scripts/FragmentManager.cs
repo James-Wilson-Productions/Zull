@@ -38,6 +38,7 @@ public class FragmentManager : MonoBehaviour {
 		Next = newFragment.GetComponent <Fragment> ();
 		currentFragment = 1;
 		transitionCount = 0;
+		PlayerMovement.instance.yDiePosition = Current.endNode.transform.position.y - 150;
 	}
 	
 	// Update is called once per frame
@@ -52,6 +53,7 @@ public class FragmentManager : MonoBehaviour {
 			Previous = Current;
 			//make current fragment = next fragment
 			Current = Next;
+			PlayerMovement.instance.yDiePosition = Current.endNode.transform.position.y - 150;
 			//instantiate a new fragment as next and make next fragment = new fragment
 			int i = Random.Range (0, fragments.Length);
 			//makes sure there are no repeating fragments
@@ -68,6 +70,7 @@ public class FragmentManager : MonoBehaviour {
 				MusicManager.instance.Transition ();
 				transitionCount = 0;
 			}
+			print (PlayerMovement.instance.yDiePosition);
 		}
 
 		if (Input.GetKeyDown (KeyCode.Q)){
