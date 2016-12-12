@@ -3,9 +3,15 @@ using System.Collections;
 
 public class CameraController : MonoBehaviour {
 
+	public static CameraController instance;
+
 	public Transform target; //player we want to follow
 	public float smoothing;
 	public float followDistance;
+
+	void Awake(){
+		instance = this;
+	}
 
 	// Use this for initialization
 	void Start () {

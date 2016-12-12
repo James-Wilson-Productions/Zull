@@ -5,9 +5,11 @@ using Random = UnityEngine.Random;
 
 public class FragmentManager : MonoBehaviour {
 
+	public static FragmentManager instance;
 	public GameObject[] fragments;
 	//the first fragment the player starts on
 	public Fragment initial;
+	public GameObject Elevator;
 	//how far the player must be from the fragment to load a new fragment
 	public float loadDistance;
 
@@ -24,6 +26,9 @@ public class FragmentManager : MonoBehaviour {
 	public int transitionNumber;
 	public int transitionCount;
 
+	void Awake(){
+		instance = this;
+	}
 	// Use this for initialization
 	void Start () {
 		//set the initial fragment
@@ -55,7 +60,6 @@ public class FragmentManager : MonoBehaviour {
 			} else{
 				currentFragment = i;
 			}
-			print ("fragment number: " + i);
 			GameObject newFragment = Instantiate (fragments [currentFragment], Current.endNode.position, transform.rotation) as GameObject;
 			Next = newFragment.GetComponent <Fragment> ();
 
@@ -72,9 +76,26 @@ public class FragmentManager : MonoBehaviour {
 	}
 
 	public void Revive(){
-		Instantiate (initial, transform.position, transform.rotation);
-		PlayerMovement.instance.transform.position = initial.transform.position;
+		GameObject initialPlatform = (GameObject)Instantiate (Elevator, transform.position, transform.rotation);
+		if (Next != null){
+			Destroy (Next.gameObject);
+		}
+		if (Previous != null){
+			Destroy (Previous.gameObject);
+		}
+		if (Current != null){
+			Destroy (Current.gameObject);
+		}
+		
+		Current = initialPlatform.GetComponent <Fragment> ();
+
+		int i = Random.Range (0, fragments.Length);
+		GameObject newFragment = Instantiate (fragments [i], Current.endNode.position, transform.rotation) as GameObject;
+		Next = newFragment.GetComponent <Fragment> ();
+
+		PlayerMovement.instance.transform.position = initialPlatform.transform.position;
 		PlayerMovement.instance.Revive ();
+		CameraController.instance.transform.position = PlayerMovement.instance.transform.position;
 	}
 
 	float getPlayerX(){

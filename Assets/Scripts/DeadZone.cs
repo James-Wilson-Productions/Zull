@@ -8,7 +8,9 @@ public class DeadZone : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D collider){
 		if (collider.tag == "Player"){
 			Invoke ("KillPlayer", deadZoneTime);
+			print ("Player die");
 		}
+		print ("Player die");
 	}
 
 	void KillPlayer(){
