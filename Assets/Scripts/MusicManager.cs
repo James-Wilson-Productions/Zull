@@ -58,7 +58,6 @@ public class MusicManager : MonoBehaviour {
 
     public void PlayMusic() {
         for(int i = 0; i < music.Length; i++) {
-            print(music[i]);
             music[i].Play();
         }
     }
