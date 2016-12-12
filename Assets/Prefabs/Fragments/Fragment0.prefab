@@ -4040,6 +4040,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000010247165434}
+  - 114: {fileID: 114000011588483466}
   m_Layer: 0
   m_Name: DeadZone
   m_TagString: Untagged
@@ -19837,6 +19838,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canJump: 0
+--- !u!114 &114000011588483466
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013839248054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5912606de7a894c858d209ee1a3554e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deadZoneTime: 3
 --- !u!114 &114000011679261202
 MonoBehaviour:
   m_ObjectHideFlags: 1

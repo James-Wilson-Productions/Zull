@@ -21,6 +21,9 @@ public class FragmentManager : MonoBehaviour {
 
 	int currentFragment;
 
+	public int transitionNumber;
+	public int transitionCount;
+
 	// Use this for initialization
 	void Start () {
 		//set the initial fragment
@@ -29,6 +32,7 @@ public class FragmentManager : MonoBehaviour {
 		GameObject newFragment = Instantiate (fragments [i], Current.endNode.position, transform.rotation) as GameObject;
 		Next = newFragment.GetComponent <Fragment> ();
 		currentFragment = 1;
+		transitionCount = 0;
 	}
 	
 	// Update is called once per frame
@@ -56,12 +60,21 @@ public class FragmentManager : MonoBehaviour {
 			Next = newFragment.GetComponent <Fragment> ();
 
 			//change the track
-
+			if (transitionCount++ > transitionNumber){
+				MusicManager.instance.Transition ();
+				transitionCount = 0;
+			}
 		}
 
 		if (Input.GetKeyDown (KeyCode.Q)){
 			MusicManager.instance.Transition ();
 		}
+	}
+
+	public void Revive(){
+		Instantiate (initial, transform.position, transform.rotation);
+		PlayerMovement.instance.transform.position = initial.transform.position;
+		PlayerMovement.instance.Revive ();
 	}
 
 	float getPlayerX(){

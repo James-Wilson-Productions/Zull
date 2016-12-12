@@ -36,6 +36,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000014075079014}
+  - 114: {fileID: 114000012600875328}
   m_Layer: 0
   m_Name: DeadZone
   m_TagString: Untagged
@@ -82,6 +83,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 61.14, y: 19.44, z: 0.2}
   m_Center: {x: 0, y: 4.9, z: 0}
+--- !u!114 &114000012600875328
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012679409008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5912606de7a894c858d209ee1a3554e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deadZoneTime: 3
 --- !u!212 &212000013327635262
 SpriteRenderer:
   m_ObjectHideFlags: 1
