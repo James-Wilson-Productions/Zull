@@ -234,6 +234,7 @@ public class PlayerMovement : MonoBehaviour {
 		dead = false;
 		yield return new WaitForSeconds(1.5f);
 		anim.SetTrigger ("Revive");
+		FragmentManager.instance.Revive();
 	}
 
 	public bool isDead(){
