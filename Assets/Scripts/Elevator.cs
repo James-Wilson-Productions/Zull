@@ -16,6 +16,8 @@ public class Elevator : MonoBehaviour {
 		SoundManager.instance.PlayElevator ();
 		yield return new WaitForSeconds (10.612f);
 		anim.SetBool ("openElevator", true);
+        yield return new WaitForSeconds(2f);
+        MusicManager.instance.PlayMusic();
 	}
 
 }

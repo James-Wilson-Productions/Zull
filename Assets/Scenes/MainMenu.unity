@@ -2303,6 +2303,11 @@ Prefab:
     - {fileID: 114000010430914896, guid: 378c131c9abc03d48b73fd749d350128, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 378c131c9abc03d48b73fd749d350128, type: 2}
   m_IsPrefabParent: 0
+--- !u!82 &917673203 stripped
+AudioSource:
+  m_PrefabParentObject: {fileID: 82000012068527454, guid: 796aac74677844521976786aba0d0242,
+    type: 2}
+  m_PrefabInternal: {fileID: 1101514013}
 --- !u!1 &969503507
 GameObject:
   m_ObjectHideFlags: 0
@@ -2576,6 +2581,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114000012254087404, guid: 796aac74677844521976786aba0d0242,
+        type: 2}
+      propertyPath: music.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011605652000, guid: 796aac74677844521976786aba0d0242, type: 2}
       propertyPath: m_LocalPosition.x
       value: 1705.6436
@@ -2608,6 +2618,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114000012254087404, guid: 796aac74677844521976786aba0d0242,
+        type: 2}
+      propertyPath: music.Array.data[5]
+      value: 
+      objectReference: {fileID: 917673203}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 796aac74677844521976786aba0d0242, type: 2}
   m_IsPrefabParent: 0

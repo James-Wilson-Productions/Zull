@@ -9,6 +9,7 @@ public class MusicManager : MonoBehaviour {
 
 	public AudioMixerSnapshot[] trackStates;
 	public AudioClip[] Stabs;
+    public AudioSource[] music;
 	public AudioMixerSnapshot mainMenu;
 	public AudioSource StabSource;
 	public AudioMixerGroup Master;
@@ -53,6 +54,12 @@ public class MusicManager : MonoBehaviour {
 	public void SetVolume(float value){
 		Volume = value;
 		Master.audioMixer.SetFloat ("MusicVolume", Volume);
-        print(Volume);
 	}
+
+    public void PlayMusic() {
+        for(int i = 0; i < music.Length; i++) {
+            print(music[i]);
+            music[i].Play();
+        }
+    }
 }
