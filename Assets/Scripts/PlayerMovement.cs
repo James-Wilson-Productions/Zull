@@ -26,6 +26,10 @@ public class PlayerMovement : MonoBehaviour {
 	public bool onWarp;
 	bool canMove;
 
+	//warp clamps
+	float warpPos;
+	float warpClamp;
+
 	void Awake(){
 		instance = this;
 		canMove = true;
@@ -134,9 +138,12 @@ public class PlayerMovement : MonoBehaviour {
 
 	void UpdateWarp(){
 		if (onWarp){
-
-            rigid.velocity = new Vector2(speed / 2, moveY * speed);
-
+			if (moveX > 0){
+				rigid.velocity = new Vector2(speed * 2, 0);
+			} else {
+				rigid.velocity = new Vector2(speed / 2, 0);
+			}
+				
 			//update the sprite orientation
 			if (moveX != 0){
 				transform.localScale = new Vector3 (moveX, 1, 1);
@@ -145,6 +152,7 @@ public class PlayerMovement : MonoBehaviour {
 	}
 
 	void Jump(){
+		SoundManager.instance.PlayJump ();
 		rigid.velocity = Vector2.zero;
 		rigid.AddForce (Vector2.up * jumpForce, ForceMode2D.Impulse);
 		canJump = false;
@@ -205,6 +213,10 @@ public class PlayerMovement : MonoBehaviour {
 		rigid.isKinematic = false;
 		onWarp = false;
 		slowMo = false;
+	}
+
+	public void Die(){
+		SoundManager.instance.PlaySplat ();
 	}
 
 	IEnumerator DontMove(float airTime){

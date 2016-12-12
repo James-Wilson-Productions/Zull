@@ -14,6 +14,7 @@ public class JumpPadShoot : MonoBehaviour {
 		if (collider.tag == "Player") {
 			//shoot player in the air
 			PlayerMovement.instance.Push(transform.up, power, airTime);
+			SoundManager.instance.PlayJumpPad ();
 			anim.SetTrigger ("Launch");
 		}
 	}

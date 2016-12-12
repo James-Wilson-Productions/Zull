@@ -20,4 +20,16 @@ public class Bullet : MonoBehaviour {
 			transform.position += -transform.right * Time.deltaTime * speed*1.5f;
 		}
 	}
+
+	void OnTriggerEnter2D(Collider2D collider){
+		if (collider.tag == "Player"){
+			if (PlayerMovement.instance.shieldDraw){
+				SoundManager.instance.PlayShieldHit ();
+			} else {
+				SoundManager.instance.PlayThud ();
+			}
+
+			Destroy (gameObject);
+		}
+	}
 }
