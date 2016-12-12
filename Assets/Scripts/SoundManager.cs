@@ -113,17 +113,12 @@ public class SoundManager : MonoBehaviour {
 		AutoPlay ();
 	}
 	public void PlayTurretShoot(){
-<<<<<<< HEAD
-		ElevatorSource.clip = TurretShoot;
-		Player.Play ();
-=======
 		SFX.clip = TurretShoot;
 		SFXAutoPlay ();
->>>>>>> 6e06a6dae75d531d68c952c5eafe7f1412b05f89
 	}
 	public void PlayTurretStartUp(){
-        Player.clip = TurretStartup;
-        AutoPlay();
+        SFX.clip = TurretStartup;
+        SFXAutoPlay();
 	}
 	public void PlayWarp(){
 		SFX.clip = Warp;
