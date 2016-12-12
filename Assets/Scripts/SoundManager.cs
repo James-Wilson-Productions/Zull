@@ -27,7 +27,8 @@ public class SoundManager : MonoBehaviour {
 	public AudioClip SpongePadUp;
 	public AudioClip SpongePadDown;
 	public AudioClip TurretShoot;
-	public AudioClip Warp;
+	public AudioClip TurretStartup;
+    public AudioClip Warp;
 
 	float lowPitch = 0.8f;
 	float highPitch = 1.2f;
@@ -112,11 +113,12 @@ public class SoundManager : MonoBehaviour {
 		AutoPlay ();
 	}
 	public void PlayTurretShoot(){
-		Player.clip = TurretShoot;
-		AutoPlay ();
+		ElevatorSource.clip = TurretShoot;
+		Player.Play ();
 	}
 	public void PlayTurretStartUp(){
-		print ("insert turret start up sound");
+        Player.clip = TurretStartup;
+        AutoPlay();
 	}
 	public void PlayWarp(){
 		Player.clip = Warp;

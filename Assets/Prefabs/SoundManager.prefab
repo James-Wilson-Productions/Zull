@@ -234,4 +234,5 @@ MonoBehaviour:
   SpongePadUp: {fileID: 8300000, guid: 74308256303054d48b13a3556b607387, type: 3}
   SpongePadDown: {fileID: 8300000, guid: fa864ddc4282e6243b5661f5dcdc7814, type: 3}
   TurretShoot: {fileID: 8300000, guid: c086b6cac0e581842bc60cf673b648c1, type: 3}
+  TurretStartup: {fileID: 8300000, guid: 770d68038ae5697408d22e5c42103974, type: 3}
   Warp: {fileID: 8300000, guid: fa252e68e55df5945ae6354c3ee866a8, type: 3}
