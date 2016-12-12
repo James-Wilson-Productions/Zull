@@ -328,6 +328,31 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 83001589}
+--- !u!82 &95550039 stripped
+AudioSource:
+  m_PrefabParentObject: {fileID: 82000011704115128, guid: 796aac74677844521976786aba0d0242,
+    type: 2}
+  m_PrefabInternal: {fileID: 1101514013}
+--- !u!82 &95550040 stripped
+AudioSource:
+  m_PrefabParentObject: {fileID: 82000013387257398, guid: 796aac74677844521976786aba0d0242,
+    type: 2}
+  m_PrefabInternal: {fileID: 1101514013}
+--- !u!82 &95550041 stripped
+AudioSource:
+  m_PrefabParentObject: {fileID: 82000013993756918, guid: 796aac74677844521976786aba0d0242,
+    type: 2}
+  m_PrefabInternal: {fileID: 1101514013}
+--- !u!82 &95550042 stripped
+AudioSource:
+  m_PrefabParentObject: {fileID: 82000012161990322, guid: 796aac74677844521976786aba0d0242,
+    type: 2}
+  m_PrefabInternal: {fileID: 1101514013}
+--- !u!82 &95550043 stripped
+AudioSource:
+  m_PrefabParentObject: {fileID: 82000013662692620, guid: 796aac74677844521976786aba0d0242,
+    type: 2}
+  m_PrefabInternal: {fileID: 1101514013}
 --- !u!1 &114118979
 GameObject:
   m_ObjectHideFlags: 0
@@ -2623,6 +2648,31 @@ Prefab:
       propertyPath: music.Array.data[5]
       value: 
       objectReference: {fileID: 917673203}
+    - target: {fileID: 114000012254087404, guid: 796aac74677844521976786aba0d0242,
+        type: 2}
+      propertyPath: music.Array.data[0]
+      value: 
+      objectReference: {fileID: 95550043}
+    - target: {fileID: 114000012254087404, guid: 796aac74677844521976786aba0d0242,
+        type: 2}
+      propertyPath: music.Array.data[1]
+      value: 
+      objectReference: {fileID: 95550042}
+    - target: {fileID: 114000012254087404, guid: 796aac74677844521976786aba0d0242,
+        type: 2}
+      propertyPath: music.Array.data[2]
+      value: 
+      objectReference: {fileID: 95550041}
+    - target: {fileID: 114000012254087404, guid: 796aac74677844521976786aba0d0242,
+        type: 2}
+      propertyPath: music.Array.data[3]
+      value: 
+      objectReference: {fileID: 95550040}
+    - target: {fileID: 114000012254087404, guid: 796aac74677844521976786aba0d0242,
+        type: 2}
+      propertyPath: music.Array.data[4]
+      value: 
+      objectReference: {fileID: 95550039}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 796aac74677844521976786aba0d0242, type: 2}
   m_IsPrefabParent: 0
