@@ -1,0 +1,21 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class Elevator : MonoBehaviour {
+
+	Animator anim;
+
+	// Use this for initialization
+	void Start () {
+		anim = GetComponent <Animator> ();
+		StartCoroutine (OpenElevator());
+	}
+
+	IEnumerator OpenElevator(){
+		yield return new WaitForEndOfFrame ();
+		SoundManager.instance.PlayElevator ();
+		yield return new WaitForSeconds (10.612f);
+		anim.SetBool ("openElevator", true);
+	}
+
+}
