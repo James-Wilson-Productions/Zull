@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Text;
 
 public class Elevator : MonoBehaviour {
 
@@ -9,6 +10,7 @@ public class Elevator : MonoBehaviour {
 	void Start () {
 		anim = GetComponent <Animator> ();
 		StartCoroutine (OpenElevator());
+		PlayerMovement.instance.enabled = false;
 	}
 
 	IEnumerator OpenElevator(){
