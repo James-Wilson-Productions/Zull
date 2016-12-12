@@ -15,12 +15,12 @@ public class Elevator : MonoBehaviour {
 	IEnumerator OpenElevator(){
 		yield return new WaitForEndOfFrame ();
 		SoundManager.instance.PlayElevator ();
-		MusicManager.instance.Mute ();
+        PlayerMovement.instance.canMove = false;
 		yield return new WaitForSeconds (10.612f);
 		anim.SetBool ("openElevator", true);
         yield return new WaitForSeconds(2f);
+        PlayerMovement.instance.canMove = true;
         MusicManager.instance.PlayMusic();
-		MusicManager.instance.TransitionSpecific (2);
 	}
 
 }
