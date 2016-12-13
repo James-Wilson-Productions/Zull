@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour {
 
     public static Color ambientLighting;
+	public Text HighScoreText;
 
     bool settingsOpen;
 
@@ -16,6 +17,7 @@ public class MainMenu : MonoBehaviour {
 
     void Awake() {
         anim = GetComponent<Animator>();
+		HighScoreText.text = "High Score: " + FragmentManager.HighScore;
         sfx = GameObject.Find("SFX").GetComponent<Slider>();
         music = GameObject.Find("Music").GetComponent<Slider>();
         gamma = GameObject.Find("Gamma").GetComponent<Slider>();
