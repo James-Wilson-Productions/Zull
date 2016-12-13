@@ -49,6 +49,7 @@ public class PlayerMovement : MonoBehaviour {
 	void Start(){
 		rigid = GetComponent <Rigidbody2D> ();
 		anim = GetComponentInChildren<Animator> ();
+		yDiePosition = transform.position.y - 100;
 	}
 
 	void FixedUpdate(){
