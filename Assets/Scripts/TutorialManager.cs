@@ -3,6 +3,8 @@ using System.Collections;
 
 public class TutorialManager : MonoBehaviour {
 
+
+
 	void Start () {
         MusicManager.instance.PlayMusic();
         MusicManager.instance.Mute();
@@ -15,6 +17,7 @@ public class TutorialManager : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other) {
         if(other.tag == "Player") {
+
         }
     }
 }
