@@ -26,6 +26,9 @@ public class FragmentManager : MonoBehaviour {
 	public int transitionNumber;
 	public int transitionCount;
 
+	public int Score;
+	public static int HighScore;
+
 	void Awake(){
 		instance = this;
 	}
@@ -70,7 +73,9 @@ public class FragmentManager : MonoBehaviour {
 				MusicManager.instance.Transition ();
 				transitionCount = 0;
 			}
-			print (PlayerMovement.instance.yDiePosition);
+
+			//increase the players score
+			Score += 100;
 		}
 
 		if (Input.GetKeyDown (KeyCode.Q)){
