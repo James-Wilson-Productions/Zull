@@ -3,9 +3,12 @@ using System.Collections;
 using System;
 using UnityEngine.EventSystems;
 using UnityEditor;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour {
 	public static PlayerMovement instance;
+
+	public GameObject GameOverPanel;
 
 	Rigidbody2D rigid;
 	Animator anim;
@@ -251,7 +254,14 @@ public class PlayerMovement : MonoBehaviour {
 		SoundManager.instance.PlaySplat ();
 		dead = true;
 		anim.SetTrigger ("Dead");
-		StartCoroutine (Revive(spawnPosition, TutorialMode));
+
+		if (TutorialMode){
+			StartCoroutine (Revive(spawnPosition, TutorialMode));
+		} else{
+			OpenGameOver ();
+		}
+			
+			
 	}
 
 	public IEnumerator Revive(Vector3 spawnPosition, bool TutorialMode){
@@ -274,5 +284,21 @@ public class PlayerMovement : MonoBehaviour {
 		canMove = false;
 		yield return new WaitForSeconds (airTime);
 		canMove = true;
+	}
+
+	public void OpenGameOver(){
+		GameOverPanel.GetComponent <Animator>().SetBool ("OpenSettings", true);
+		rigid.isKinematic = true;
+	}
+
+	public void CloseGameOver(){
+		GameOverPanel.GetComponent <Animator>().SetBool ("OpenSettings", false);
+		rigid.isKinematic = false;
+		StartCoroutine (Revive(spawnPosition, TutorialMode));
+	}
+
+	public void Back(){
+		MusicManager.instance.TransitionMainMenu ();
+		SceneManager.LoadScene ("MainMenu");
 	}
 }
