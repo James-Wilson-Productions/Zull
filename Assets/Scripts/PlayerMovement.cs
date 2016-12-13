@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour {
 
 	public GameObject GameOverPanel;
 
-	Rigidbody2D rigid;
+	public Rigidbody2D rigid;
 	Animator anim;
 
 	public float jumpForce;

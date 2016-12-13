@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour {
 
@@ -34,6 +35,10 @@ public class MainMenu : MonoBehaviour {
         settingsOpen = false;
         anim.SetBool("OpenSettings", false);
     }
+
+	public void tutorial(){
+		SceneManager.LoadScene ("Tutorial");
+	}
 
     public void quit() {
         Application.Quit();
