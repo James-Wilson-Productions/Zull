@@ -149,7 +149,9 @@ public class PlayerMovement : MonoBehaviour {
 			} else {
 				Die (spawnPosition, true);
 			}
-			transform.position += Vector3.up * 1000;
+            if (!TutorialMode) {
+                transform.position += Vector3.up * 1000;
+            }
 			rigid.velocity = Vector2.zero;
 				
 		}

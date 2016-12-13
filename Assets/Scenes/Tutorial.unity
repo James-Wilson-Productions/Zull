@@ -104,6 +104,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 35918508}
   - 61: {fileID: 35918509}
+  - 114: {fileID: 35918510}
   m_Layer: 0
   m_Name: DeathZone1
   m_TagString: Untagged
@@ -138,6 +139,17 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 10.6}
   serializedVersion: 2
   m_Size: {x: 264.24, y: 52.22}
+--- !u!114 &35918510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 35918507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c7b4ec9b98ada543a92e1b3d821fcbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &109490081
 Prefab:
   m_ObjectHideFlags: 0
@@ -1599,7 +1611,7 @@ Transform:
   - {fileID: 969202038}
   - {fileID: 2046402331}
   m_Father: {fileID: 712282562}
-  m_RootOrder: 21
+  m_RootOrder: 7
 --- !u!1 &432957733
 GameObject:
   m_ObjectHideFlags: 0
@@ -2984,7 +2996,7 @@ Transform:
   - {fileID: 1712976411}
   - {fileID: 1633464301}
   m_Father: {fileID: 712282562}
-  m_RootOrder: 15
+  m_RootOrder: 4
 --- !u!1 &643426479
 GameObject:
   m_ObjectHideFlags: 0
@@ -3264,10 +3276,13 @@ Transform:
   - {fileID: 1315833656}
   - {fileID: 1428347500}
   - {fileID: 1307720053}
+  - {fileID: 634638006}
   - {fileID: 1231817452}
   - {fileID: 866207918}
+  - {fileID: 421694558}
   - {fileID: 2058741957}
   - {fileID: 895372892}
+  - {fileID: 1363137428}
   - {fileID: 1756442693}
   - {fileID: 1242362042}
   - {fileID: 950803372}
@@ -3275,18 +3290,15 @@ Transform:
   - {fileID: 898005157}
   - {fileID: 1362613871}
   - {fileID: 1654548264}
-  - {fileID: 634638006}
   - {fileID: 1950578912}
   - {fileID: 180974084}
   - {fileID: 871243430}
   - {fileID: 1086850578}
   - {fileID: 830260584}
-  - {fileID: 421694558}
   - {fileID: 1876383227}
   - {fileID: 1764297147}
   - {fileID: 1163038799}
   - {fileID: 382116987}
-  - {fileID: 1363137428}
   m_Father: {fileID: 1302545557}
   m_RootOrder: 0
 --- !u!1 &718964284
@@ -3538,11 +3550,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000013554747572, guid: 378c131c9abc03d48b73fd749d350128, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 134.8
+      value: -42.3
       objectReference: {fileID: 0}
     - target: {fileID: 4000013554747572, guid: 378c131c9abc03d48b73fd749d350128, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 10.2
+      value: 2.2
       objectReference: {fileID: 0}
     - target: {fileID: 4000013554747572, guid: 378c131c9abc03d48b73fd749d350128, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3634,6 +3646,16 @@ Prefab:
     - target: {fileID: 4000012213597528, guid: 378c131c9abc03d48b73fd749d350128, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -32.329002
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013234353882, guid: 378c131c9abc03d48b73fd749d350128,
+        type: 2}
+      propertyPath: TutorialMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013234353882, guid: 378c131c9abc03d48b73fd749d350128,
+        type: 2}
+      propertyPath: yDiePosition
+      value: -66
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 378c131c9abc03d48b73fd749d350128, type: 2}
@@ -3884,6 +3906,34 @@ SpriteRenderer:
   m_Color: {r: 0.5588235, g: 0.5588235, b: 0.5588235, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &879531781
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 879531782}
+  m_Layer: 0
+  m_Name: RespawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: -304785387049774780, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &879531782
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 879531781}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 35.3, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1028596339}
+  m_RootOrder: 3
 --- !u!4 &895372892 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000013584666284, guid: b8a0a8fd0e525804facf588abb569101,
@@ -4703,6 +4753,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 397c82b130d3a274a9dd2b447b6c8d67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deadzone1: 0
+  deadzone2: 0
 --- !u!4 &1028596339
 Transform:
   m_ObjectHideFlags: 0
@@ -4717,6 +4769,7 @@ Transform:
   - {fileID: 35918508}
   - {fileID: 1100499552}
   - {fileID: 373832679}
+  - {fileID: 879531782}
   m_Father: {fileID: 0}
   m_RootOrder: 1
 --- !u!61 &1028596340
@@ -5067,6 +5120,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1100499552}
   - 61: {fileID: 1100499553}
+  - 114: {fileID: 1100499554}
   m_Layer: 0
   m_Name: DeathZone2
   m_TagString: Untagged
@@ -5101,6 +5155,17 @@ BoxCollider2D:
   m_Offset: {x: 1.5, y: 39.5}
   serializedVersion: 2
   m_Size: {x: 47.1, y: 134.5}
+--- !u!114 &1100499554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1100499551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64bfc39793cfe604a88d08300d80ee28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1104469888
 Prefab:
   m_ObjectHideFlags: 0
@@ -6999,7 +7064,7 @@ Transform:
   - {fileID: 406942499}
   - {fileID: 1773877916}
   m_Father: {fileID: 712282562}
-  m_RootOrder: 26
+  m_RootOrder: 10
 --- !u!4 &1366064810 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000010358007522, guid: 83d2a5e84ec624448a6813f293ba995f,
