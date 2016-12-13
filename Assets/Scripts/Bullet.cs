@@ -22,14 +22,18 @@ public class Bullet : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D collider){
-		if (collider.tag == "Player"){
+		if (collider.tag == "Player" && !PlayerMovement.instance.isDead()){
 			if (PlayerMovement.instance.shieldDraw){
 				SoundManager.instance.PlayShieldHit ();
-			} else {
+            } else {
 				SoundManager.instance.PlayThud ();
-			}
-
-			Destroy (gameObject);
+                if (PlayerMovement.instance.TutorialMode) {
+                    PlayerMovement.instance.Die(PlayerMovement.instance.spawnPosition, true);
+                } else {
+                    PlayerMovement.instance.Die(transform.position, false);
+                }
+            }
+            Destroy (gameObject);
 		}
 	}
 }

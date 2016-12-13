@@ -265,7 +265,6 @@ public class PlayerMovement : MonoBehaviour {
 	}
 
 	public IEnumerator Revive(Vector3 spawnPosition, bool TutorialMode){
-		dead = false;
 		yield return new WaitForSeconds(1.5f);
 		anim.SetTrigger ("Revive");
 		if (!TutorialMode){
@@ -273,10 +272,10 @@ public class PlayerMovement : MonoBehaviour {
 		} else {
 			transform.position = spawnPosition;
 		}
-			
-	}
+		dead = false;
+    }
 
-	public bool isDead(){
+    public bool isDead(){
 		return dead;
 	}
 
