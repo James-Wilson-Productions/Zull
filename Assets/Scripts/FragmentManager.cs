@@ -56,7 +56,7 @@ public class FragmentManager : MonoBehaviour {
 			Previous = Current;
 			//make current fragment = next fragment
 			Current = Next;
-			PlayerMovement.instance.yDiePosition = Current.endNode.transform.position.y - 150;
+			PlayerMovement.instance.yDiePosition = Current.endNode.transform.position.y - 400;
 			//instantiate a new fragment as next and make next fragment = new fragment
 			int i = Random.Range (0, fragments.Length);
 			//makes sure there are no repeating fragments

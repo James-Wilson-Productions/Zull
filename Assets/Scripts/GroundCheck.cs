@@ -23,7 +23,11 @@ public class GroundCheck : MonoBehaviour {
 			playerMovement.grounded = true;
 			playerMovement.onIce = true;
 		}
-				
+		int y = -1000;
+		print (PlayerMovement.instance.rigid.velocity.y);
+		if (PlayerMovement.instance.rigid.velocity.y < y){
+			PlayerMovement.instance.Die (transform.position, true);
+		}
 	}
 
 	void OnTriggerExit2D(Collider2D collider){

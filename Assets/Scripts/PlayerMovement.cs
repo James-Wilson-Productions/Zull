@@ -4,13 +4,16 @@ using System;
 using UnityEngine.EventSystems;
 using UnityEditor;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class PlayerMovement : MonoBehaviour {
 	public static PlayerMovement instance;
 
 	public GameObject GameOverPanel;
+	public Text ScoreText;
 
-	Rigidbody2D rigid;
+	public Rigidbody2D rigid;
 	Animator anim;
 
 	public float jumpForce;
@@ -49,6 +52,7 @@ public class PlayerMovement : MonoBehaviour {
 	void Start(){
 		rigid = GetComponent <Rigidbody2D> ();
 		anim = GetComponentInChildren<Animator> ();
+		yDiePosition = transform.position.y - 100;
 	}
 
 	void FixedUpdate(){
@@ -288,6 +292,11 @@ public class PlayerMovement : MonoBehaviour {
 	public void OpenGameOver(){
 		GameOverPanel.GetComponent <Animator>().SetBool ("OpenSettings", true);
 		rigid.isKinematic = true;
+		ScoreText.text = "Score: " + FragmentManager.instance.Score;
+		if (FragmentManager.instance.Score > FragmentManager.HighScore){
+			FragmentManager.HighScore = FragmentManager.instance.Score;
+		}
+			
 	}
 
 	public void CloseGameOver(){
