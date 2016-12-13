@@ -3616,11 +3616,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000013554747572, guid: 378c131c9abc03d48b73fd749d350128, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -42.5
+      value: -41
       objectReference: {fileID: 0}
     - target: {fileID: 4000013554747572, guid: 378c131c9abc03d48b73fd749d350128, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.7
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4000013554747572, guid: 378c131c9abc03d48b73fd749d350128, type: 2}
       propertyPath: m_LocalPosition.z
@@ -4827,6 +4827,7 @@ MonoBehaviour:
   deadzone1: 0
   deadzone2: 0
   deadzone3: 0
+  respawnPoint: {fileID: 0}
   useThis: {fileID: 1466661546}
   spongePad: {fileID: 1373516085}
   deadzonePads: {fileID: 2022821933}

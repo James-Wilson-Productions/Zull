@@ -23,10 +23,11 @@ public class GroundCheck : MonoBehaviour {
 			playerMovement.grounded = true;
 			playerMovement.onIce = true;
 		}
-		int y = -1000;
+		int y = -120;
 		print (PlayerMovement.instance.rigid.velocity.y);
 		if (PlayerMovement.instance.rigid.velocity.y < y){
-			PlayerMovement.instance.Die (transform.position, true);
+            PlayerMovement.instance.rigid.velocity = Vector2.zero;
+			PlayerMovement.instance.Die (TutorialManager.instance.respawnPoint.position, true);
 		}
 	}
 

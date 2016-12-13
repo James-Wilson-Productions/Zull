@@ -21,7 +21,8 @@ public class MainMenu : MonoBehaviour {
         sfx = GameObject.Find("SFX").GetComponent<Slider>();
         music = GameObject.Find("Music").GetComponent<Slider>();
         gamma = GameObject.Find("Gamma").GetComponent<Slider>();
-        RenderSettings.ambientLight = new Color(0.2f, 0.2f, 0.2f, 1);
+        RenderSettings.ambientLight = new Color(0.5f, 0.5f, 0.5f, 1);
+        ambientLighting = RenderSettings.ambientLight;
     }
 
     public void startGame() {

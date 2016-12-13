@@ -9,7 +9,7 @@ public class TutorialManager : MonoBehaviour {
     public bool deadzone2;
     public bool deadzone3;
 
-    Transform respawnPoint;
+    public Transform respawnPoint;
 
     public GameObject useThis;
     public GameObject spongePad;
@@ -20,6 +20,7 @@ public class TutorialManager : MonoBehaviour {
     }
 
 	void Start () {
+        PlayerMovement.instance.yDiePosition = -66;
         respawnPoint = GameObject.Find("RespawnPoint").GetComponent<Transform>();
 
         MusicManager.instance.PlayMusic();
