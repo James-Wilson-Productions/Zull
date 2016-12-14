@@ -22,9 +22,9 @@ public class CameraController : MonoBehaviour {
 		if (target != null && !PlayerMovement.instance.slowMo) {
 			transform.position = Vector3.Lerp (transform.position, target.position + new Vector3(0,0,-followDistance), 
 				smoothing*Time.deltaTime);			
-		} else{
+		} else if (target != null){
 			transform.position = Vector3.Lerp (transform.position, target.position + new Vector3(0,0,-followDistance), 
-				smoothing* 1/0.3f *Time.deltaTime);		
+				smoothing* 1/0.3f * Time.fixedDeltaTime);		
 		}
 	}
 

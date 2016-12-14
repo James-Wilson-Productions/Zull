@@ -2,7 +2,6 @@
 using System.Collections;
 using System;
 using UnityEngine.EventSystems;
-using UnityEditor;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.SocialPlatforms.Impl;
